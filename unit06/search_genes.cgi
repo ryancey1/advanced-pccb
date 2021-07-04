@@ -1,6 +1,6 @@
 #! /usr/local/bin/python3
 
-import os
+import re
 import cgi
 import jinja2
 import mysql.connector as sql
@@ -19,8 +19,10 @@ else:
     q = '%'+queried+'%'
     qq = queried
 
-# mask personal SQL password
-pw = os.getenv('JHU_SQL_PW')
+# mask my SQL password
+with open("/export/home/ryancey3/.bashrc") as z:
+    tmp = z.read()
+    pw = re.search(r'\n.*JHU_SQL_PW="(.*)"\n', tmp).group(1)
 
 # connect to my chado database
 conn = sql.connect(user='ryancey3', password=pw,
