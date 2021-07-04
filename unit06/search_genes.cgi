@@ -22,7 +22,7 @@ def main():
         qq = queried
 
     # mask my SQL password
-    with open("~ryancey3/.bashrc") as z:
+    with open("/export/home/ryancey3/.bashrc") as z:
         tmp = z.read()
         pw = re.search(r'\n.*JHU_SQL_PW="(.*)"\n', tmp).group(1)
 
