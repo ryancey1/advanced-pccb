@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Unit 3 Homework</title>
+</head>
+
+<body>
+    <h1>Unit 3 test</h1>
+    <h2>Sample BED File from GFF3 File</h2>
+    <!-- generate the table for our answer -->
+    <p>
+    <table>
+        {%- for entry in bed %}
+        <tr>
+            <td>{{ entry.chrom }}</td>
+            <td>{{ entry.start }}</td>
+            <td>{{ entry.end }}</td>
+            <td>{{ entry.name }}</td>
+            <td>{{ entry.score }}</td>
+            <td>{{ entry.strand }}</td>
+        </tr>
+        {%- endfor %}
+    </table>
+    </p>
+</body>
+
+</html>

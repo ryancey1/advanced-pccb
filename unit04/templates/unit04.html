@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- reference external css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Unit 4 Homework</title>
+</head>
+
+<body>
+    <h1>Unit 4 Homework</h1>
+    <!-- generate the table for our answer -->
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Length</th>
+            <th>Description</th>
+        </tr>
+        {%- for seq in entries %}
+        <tr>
+            <td>{{ seq.ID }}</td>
+            <td>{{ seq.Length }}</td>
+            <td>{{ seq.Description }}</td>
+        </tr>
+        {%- endfor %}
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- reference external css -->
+    <link rel="stylesheet" href="css/resultpage.css">
+    <title>Search Genes - Results</title>
+    <!--[if IE]>
+     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+</head>
+
+<body>
+    <h1>Unit 06 - Search Gene Products</h1>
+    <form name="search_genes" action="./search_genes.cgi" method="post">
+        <input id="bar" name="lookfor" type="search" placeholder="e.g. bifunctional">
+        <br />
+        <input type="submit" value="Search">
+        <input type="submit" value="Home" formaction="./search.html">
+    </form>
+    <hr />
+    <div id="table">
+        <h3>Results</h3>
+        <p>Query: <strong>{{ q }}</strong> | <strong id="summary">({{ n }} results)</strong></p>
+        <table>
+            <tr>
+                <th>Feature ID</th>
+                <th>Gene Product Name</th>
+            </tr>
+            <!-- parse each resulting row -->
+            {%- for entry in entries %}
+            <tr>
+                <!-- parse each column in the row -->
+                {%- for x in entry %}
+                <!-- populate cell with byte-decoded text -->
+                <td>{{ x.decode() }}</td>
+                {%- endfor %}
+            </tr>
+            {%- endfor %}
+        </table>
+    </div>
+</body>
+
+</html>

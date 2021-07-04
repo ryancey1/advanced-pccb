@@ -1,0 +1,39 @@
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+td {
+    border: 2px solid rgb(80, 80, 80);
+    padding: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th {
+    text-align: left;
+    border: 2px solid rgb(80, 80, 80);
+    padding: 5px;
+}
+
+#table {
+    margin: auto;
+}
+
+#table h3 {
+    text-align: center;
+}
+
+#table p {
+    text-align: center;
+}
+
+#summary {
+    color: red
+}
+
+input#bar {
+    margin: 8px 0
+}
