@@ -1,6 +1,7 @@
 #! /usr/local/bin/python3
 # from Bio import SeqIO
 import re
+from pprint import pprint
 
 
 class GenbankFeature:
@@ -107,8 +108,9 @@ def main():
     genbank = Genbank("files/sequence.gb")
     prodigal = Genbank("files/prodigal/e_coli_O157_H7.gbk")
 
+    print("----------------- SAMPLE GENBANK -----------------")
     genbank.feature_print()
-    print()
+    print("\n----------------- SAMPLE PRODIGAL -----------------")
     prodigal.feature_print()
 
 
