@@ -1,6 +1,6 @@
 #! /usr/local/bin/python3
 
-from genbank import *
+from genbank import GenbankRecord
 from collections import namedtuple
 import jinja2
 import os
