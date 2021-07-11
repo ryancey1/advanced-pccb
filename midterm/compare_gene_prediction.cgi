@@ -11,6 +11,7 @@ import cgi
 def parseArgs():
     form = cgi.FieldStorage()
     acc = form.getfirst('acc')
+    acc = "NZ_MT720905.1"
 
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -18,7 +19,7 @@ def parseArgs():
         help="Genbank accession number of an alternate annotation to be run against (default: AB011549.2)")
 
     if acc is not None:
-        return parser.parse_args("-a", acc)
+        return parser.parse_args(["-a", acc])
 
     return parser.parse_args()
 
