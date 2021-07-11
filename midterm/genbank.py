@@ -5,9 +5,9 @@ import re
 class GenbankRecord:
     """A class that stores annotation records in a readable JSON format"""
 
-    def __init__(self, file, id):
+    def __init__(self, file, file_type):
         self.file = file
-        self.name = id
+        self.name = file_type
         self.features = []
         self.__parse_file()
         self.length = len(self.features)
