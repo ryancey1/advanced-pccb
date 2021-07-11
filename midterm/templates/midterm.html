@@ -15,10 +15,12 @@
     <h2>Summary of results</h2>
     <table>
         <tr>
+            <th>Category</th>
             <th>Count</th>
         </tr>
-        {%- for value in summary $}
+        {%- for category, value in summary._fields|zip(summary) %}
         <tr>
+            <td>{{ category }}</td>
             <td>{{ value }}</td>
         </tr>
         {%- endfor %}

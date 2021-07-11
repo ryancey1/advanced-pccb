@@ -58,15 +58,15 @@ def compare_annotation(algo1, algo2):
 
 
 def main():
-    genbank = GenbankRecord("files/sequence.gb", "Genbank")
-    prodigal = GenbankRecord("files/prodigal/e_coli_O157_H7.gbk", "Prodigal")
+    genbank = GenbankRecord("./files/sequence.gb", "Genbank")
+    prodigal = GenbankRecord("./files/prodigal/e_coli_O157_H7.gbk", "Prodigal")
 
     summary, results = compare_annotation(genbank, prodigal)
 
     # jinja2 setup
     templateloader = jinja2.FileSystemLoader(searchpath='./templates')
     env = jinja2.Environment(loader=templateloader)
-    # env.globals.update(zip=zip)
+    env.globals.update(zip=zip)
     template = env.get_template('midterm.html')
 
     # cgi print statements, pass seqs list in the render call
