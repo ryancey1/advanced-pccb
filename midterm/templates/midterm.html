@@ -13,39 +13,65 @@
     <h1>Midterm: CDS Prediction Comparison</h1>
     <!-- generate the table for our answer -->
     <h2>Summary of results</h2>
-    <table>
-        <tr>
-            <th>Category</th>
-            <th>Count</th>
-        </tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-    </table>
-    <hr />
-    <h2>Results</h2>
-    <table>
-        <tr>
-            <th>Reference Start</th>
-            <th>Predicted Start</th>
-            <th>Agree/Disagree</th>
-            <th>Reference Stop</th>
-            <th>Predicted Stop</th>
-            <th>Agree/Disagree</th>
-        </tr>
-        {%- for result in results %}
-        <tr>
-            <td>{{ result.ref_start }}</td>
-            <td>{{ result.pred_start }}</td>
-            <td>{{ result.start_agrees }}</td>
-            <td>{{ result.ref_stop }}</td>
-            <td>{{ result.pred_stop }}</td>
-            <td>{{ result.stop_agrees }}</td>
-        </tr>
-        {%- endfor %}
-    </table>
+    <li>
+        <ul>Reference annotation source: {{ summary.ref_name }}</ul>
+        <p>Prediction annotation source: {{ summary.pred_name }}</p>
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Count</th>
+            </tr>
+            <tr>
+                <td>Reference CDS Count</td>
+                <td>{{ summary.ref_count }}</td>
+            </tr>
+            <tr>
+                <td>Prediction CDS Count</td>
+                <td>{{ summary.pred_count }}</td>
+            </tr>
+            <tr>
+                <td>Reference-Prediction Exact Matches</td>
+                <td>{{ summary.exact_match }}</td>
+            </tr>
+            <tr>
+                <td>Reference-Prediction 5' agrees, 3' disagrees</td>
+                <td>{{ summary.stop_mismatch }}</td>
+            </tr>
+            <tr>
+                <td>Reference-Prediction 5' disagrees, 3' agrees</td>
+                <td>{{ summary.start_mismatch }}</td>
+            </tr>
+            <tr>
+                <td>{{ summary.ref_name }} unique</td>
+                <td>{{ summary.unique_to_reference }}</td>
+            </tr>
+            <tr>
+                <td>{{ summary.pred_name }} unique</td>
+                <td>{{ summary.unique_to_prediction }}</td>
+            </tr>
+        </table>
+        <hr />
+        <h2>Results</h2>
+        <table>
+            <tr>
+                <th>Reference Start</th>
+                <th>Predicted Start</th>
+                <th>Agree/Disagree</th>
+                <th>Reference Stop</th>
+                <th>Predicted Stop</th>
+                <th>Agree/Disagree</th>
+            </tr>
+            {%- for result in results %}
+            <tr>
+                <td>{{ result.ref_start }}</td>
+                <td>{{ result.pred_start }}</td>
+                <td>{{ result.start_agrees }}</td>
+                <td>{{ result.ref_stop }}</td>
+                <td>{{ result.pred_stop }}</td>
+                <td>{{ result.stop_agrees }}</td>
+            </tr>
+            {%- endfor %}
+        </table>
 </body>
 
 </html>

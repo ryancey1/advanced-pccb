@@ -8,7 +8,7 @@ import jinja2
 def compare_annotation(algo1, algo2):
     # named tuples to store information
     Summary = namedtuple(
-        "Summary", "ref_count pred_count exact_match start_mismatch stop_mismatch unique_to_reference unique_to_prediction")
+        "Summary", "ref_name pred_name ref_count pred_count exact_match start_mismatch stop_mismatch unique_to_reference unique_to_prediction")
     Results = namedtuple(
         "Results", "ref_start pred_start start_agrees ref_stop pred_stop stop_agrees")
     # set up counters and a storage list
@@ -53,15 +53,15 @@ def compare_annotation(algo1, algo2):
             results.append(
                 Results(ref_start, "n/a", "DISAGREES", ref_stop, "n/a", "DISAGREES"))
         match = False  # reset boolean flag
-    return Summary(algo1.length, algo2.length, perfect,
+    return Summary(algo1.name, algo2.name, algo1.length, algo2.length, perfect,
                    mismatch_5, mismatch_3, len(ref_copy), len(pred_copy)), results
 
 
 def main():
-    genbank = GenbankRecord("./files/sequence.gb", "Genbank")
-    prodigal = GenbankRecord("./files/prodigal/e_coli_O157_H7.gbk", "Prodigal")
+    alg1 = GenbankRecord("./files/sequence.gb", "Genbank")
+    alg2 = GenbankRecord("./files/prodigal/e_coli_O157_H7.gbk", "Prodigal")
 
-    summary, results = compare_annotation(genbank, prodigal)
+    summary, results = compare_annotation(alg1, alg2)
 
     # jinja2 setup
     templateloader = jinja2.FileSystemLoader(searchpath='./templates')
