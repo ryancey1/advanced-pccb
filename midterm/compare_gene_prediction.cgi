@@ -11,7 +11,6 @@ import cgi
 def parseArgs():
     form = cgi.FieldStorage()
     acc = form.getfirst('acc')
-    acc = "NZ_MT720905.1"
 
     parser = argparse.ArgumentParser()
     parser.add_argument(
