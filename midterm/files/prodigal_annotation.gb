@@ -1,4 +1,4 @@
-DEFINITION  seqnum=1;seqlen=92721;seqhdr="gi|4589740|dbj|AB011549.2| Escherichia coli O157:H7 str. Sakai plasmid pO157 DNA, complete sequence";version=Prodigal.v2.6.3;run_type=Metagenomic;model="47|Xenorhabdus_nematophila_ATCC_19061|B|44.1|11|1";gc_cont=44.20;transl_table=11;uses_sd=1
+DEFINITION  seqnum=1;seqlen=92721;seqhdr="AB011549.2 Escherichia coli O157:H7 str. Sakai plasmid pO157 DNA, complete sequence";version=Prodigal.v2.6.3;run_type=Metagenomic;model="47|Xenorhabdus_nematophila_ATCC_19061|B|44.1|11|1";gc_cont=44.20;transl_table=11;uses_sd=1
 FEATURES             Location/Qualifiers
      CDS             <1..2502
                      /note="ID=1_1;partial=10;start_type=Edge;rbs_motif=None;rbs_spacer=None;gc_cont=0.450;conf=99.99;score=239.20;cscore=235.98;sscore=3.22;rscore=0.00;uscore=0.00;tscore=3.22;"

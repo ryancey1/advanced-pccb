@@ -2,7 +2,7 @@ LOCUS       AB011549               92721 bp    DNA     circular BCT 22-DEC-2016
 DEFINITION  Escherichia coli O157:H7 str. Sakai plasmid pO157 DNA, complete
             sequence.
 ACCESSION   AB011549
-VERSION     AB011549.2  GI:4589740
+VERSION     AB011549.2
 DBLINK      BioProject: PRJNA226
             BioSample: SAMN01911278
 KEYWORDS    .
@@ -46,7 +46,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="ToxR-regulated lipoprotein"
                      /protein_id="BAA31757.3"
-                     /db_xref="GI:4666293"
                      /translation="MNTKMNERWRTPMKLKYLSCTILAPLAIGVFSATAADNNSAIYF
                      NTSQPINDLQGSLAAEVKFAQSQILPAHPKEGDSQPHLTSLRKSLLLVRPVKADDKTP
                      VQVEARDDNNKILGTLTLYPPSSLPDTIYHLDGVPEGGIDFTPHNGTKKIINTVAEVN
@@ -71,7 +70,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Type II secretion pathway related protein"
                      /protein_id="BAA31758.1"
-                     /db_xref="GI:3336999"
                      /translation="MLFFLSFRGDRGLFIKDIVLKMLTPNRLLCVILLIAGYQLVSVI
                      HHFWLTQAASVPGLSRVSAPETAVTGDQTEERFVFTLFGRASPLSSEGRAQETMPSLS
                      DDLLSGEDLDVRGILYSSVAEHSVAIFAHNNRQFSLSVGEKVPSYDATISAIFSDHIV
@@ -86,7 +84,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Type II secretion pathway related protein"
                      /protein_id="BAA31759.1"
-                     /db_xref="GI:3337000"
                      /translation="MLNEEQYYQFFLSVLDVYGFAVVDMHNGILKVVRSKDAKTSAVP
                      VASDVSPGTGDEVVTRVVPVSNVAARDLAPLLRQLNDNAGAGSVVHYEPSNVLLMTGR
                      AAVMKRLMEIVERVDKVGNRSVATVPLTYASATDVARLVTELTKETDKTAIPAWMTAK
@@ -106,7 +103,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Type II secretion pathway related protein"
                      /protein_id="BAA31760.1"
-                     /db_xref="GI:3337001"
                      /translation="MSRVVQNVSESRPLLPFSFSRTQRILLLREQEGNRVFCMEDTPA
                      SALLEVRRVAEGPLNVTTVSAEAFEKQLVSSYQRDSDEARQMMAEIGNEMDFYTVAGE
                      LPDREDLLDANDDAPIIRLINAMLTEAIKEKASDIHIETYERHLQVRFRIDGVLREIL
@@ -124,7 +120,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Type II secretion pathway related protein"
                      /protein_id="BAA31761.1"
-                     /db_xref="GI:3337002"
                      /translation="MALFHYQASDIHGRKRSGILEADSARHARQLLREQALIPVRLDE
                      KQVHHKHSLRSILRFRPRGGSSAELALLTRQLATLVAASLPLEEALDALLRQSEKPRQ
                      RNLIAAVRTKVLEGHSLAAAMGMFPGTFERLYCAMVAAGETSGRLDVVLSRLADYTEQ
@@ -141,7 +136,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Type II secretion pathway related protein"
                      /protein_id="BAA31762.1"
-                     /db_xref="GI:3337003"
                      /translation="MRKQHQRGFTLLEIMVVIVILGVLASLVVPNLMGNKDKADRQKV
                      MSDLVALESTLDMYRLDNNRYPTTEQGLRALVSKPTVQPEPRNYRQDGYIRRLPQDPW
                      GGDYQLLNPGQYSDIDIFSPGPDGVPNTEDDIGNWTLGNAQP"
@@ -153,7 +147,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Type II secretion pathway related protein"
                      /protein_id="BAA31763.1"
-                     /db_xref="GI:3337004"
                      /translation="MSQRGFTILEMMLILLLMGITAGLVLMSFPDSAQNHLQQQRERL
                      QAQLDYALDRSQQDGLLMGIQVRFDGWKFKVLQRGTAESPPTLAEGGDIWQGYVWQTW
                      QPRRAAMGGKLPDDVRLELQYLRGLQWMSEHDDGAEPDILLLPGGEVTPFRLLFRQVG
@@ -166,7 +159,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Type II secretion pathway related protein"
                      /protein_id="BAA31764.1"
-                     /db_xref="GI:3337005"
                      /translation="MTLLEVIVALVVFALAGMALMQASTQQAAGIGRMEEKVLAGWLA
                      DNQMVQLQLEKTWPENGWGEKTISFAGTEWYLRWGGPDSDVPQPRSLEVEVRRTKEET
                      SALVSLRSSVVRE"
@@ -178,7 +170,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Type II secretion pathway related protein"
                      /protein_id="BAA31765.1"
-                     /db_xref="GI:3337006"
                      /translation="MSQQRVKGFTLLEMLLALAVFAALSISAFQVLQGGIRAHELSRD
                      KVQRLAELQRGISQMERDLTQMLPRHSRGNEGLLLAAPHLLKSDDWGISFTRNSWLNP
                      AGMLPRPELQWVGYRLRQQKLERLSYFHVDHPSGVSPDVRVMLDGVHAFRLRFFVNGD
@@ -191,7 +182,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Type II secretion pathway related protein"
                      /protein_id="BAA31766.1"
-                     /db_xref="GI:3337007"
                      /translation="MKLREQGVALLVVLLILSLMVTIAAVIAERNGRTFLRTVAQLDQ
                      LQAKWDGYTAETIAKQILQRSRQESPRKTHLAQNWAQSERQFETRGGDVRGQIVDAQA
                      CFNLNAINYGVVDLTSIPYAARIFQQLLINLQVELLQARQVTAALRDWIDRDDKPVRG
@@ -206,7 +196,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Type II secretion pathway related protein"
                      /protein_id="BAA31767.1"
-                     /db_xref="GI:3337008"
                      /translation="MHRWLAYCGQLGVREVRLLPDVLMLPLATEGWSAVKLAGQWLFR
                      RDRYAGMTVELSWLTHFLSLTAPPVIESYSVPPVPCPGPKTTEWRNQPGRDLLQLVAE
                      GDGYDGADLRQGEFARQGTWYARFRPWRYVAGALLACVFLAGSNAGLAHYRLWQQAQF
@@ -221,7 +210,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Type II secretion pathway related protein"
                      /protein_id="BAA31768.1"
-                     /db_xref="GI:3337009"
                      /translation="MNELKKRLQYVSPRERRLLIGCVALLVVVFVYYVLWQPWLIRED
                      KWRTVVTREKNTVEWMKQQVPNIKRREASMPEQGEPLGLSAAVTRTSAAYGVSVTRLQ
                      PQGERLAVTLAPVEFNALMQWLTQLERRHRIRTMVFDVAAQGNPPGQVTVNRLVLSQD
@@ -234,7 +222,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Type II secretion pathway related protein"
                      /protein_id="BAA31769.1"
-                     /db_xref="GI:3337010"
                      /translation="MLERRWRREALTLLAHSVPESGPAFNLMIPQSHCPCCFHPLGIR
                      DNIPLLSYLFLKGKSRCCGERIPVYYPLVEITNSVLFILAASRFPPGLTLAAAWLFIS
                      MLLVLAVIDCHTALLPDVLTLPLLWLGLLFSLQRGVVTLEEAVVGAVSGYLCLWGLYW
@@ -248,7 +235,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Type II secretion pathway related protein"
                      /protein_id="BAA31770.1"
-                     /db_xref="GI:3337011"
                      /translation="MMGNILKKLNCIASLLVLVTISGCHQSPSIHKQATVPPSEQLEQ
                      MASIVSATRYLKMRCNRSDLPDEQSILNVANRIAIGKGWQSLTQEDIRKHSDDIYVRL
                      TRDSTPEYIKCREFNRRLVPFIGELLARGRG"
@@ -262,7 +248,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31771.1"
-                     /db_xref="GI:3337012"
                      /translation="MICSPQNNTGAPMKKRNFSAEFKRESAQLVVDQNYTVADAAKAM
                      DIGLSTMTRWVKQLRDERQGKTPKASPITPEQIEIRELRKKLQRIEMENEILKKATTA
                      LLMSDSLNSSR"
@@ -272,7 +257,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31772.3"
-                     /db_xref="GI:4666292"
                      /translation="MFGVHRSSYRYWKNRPEKPDGRRVVLRSQVLELHNISHGSAGAR
                      SIATMATLRGFRMGRWLAGRLMKELGLVSCQQPAHRYKRGGREHVTIPNHLGRQFAVT
                      EPNQVWCGDVTYIWTGKRWAYLAVVLDLFARKPVGWAMSFSPDSRLTIKALKMAWEIR
@@ -286,7 +270,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Hemolysin C"
                      /protein_id="BAA31773.1"
-                     /db_xref="GI:3337014"
                      /translation="MGKVAWLWACSPLHKKWPLSVFAINVIPAIQTNQFALLIKDELP
                      VAFCSWASLDLECEVKYINDVTSLYAKDWMSGERKWFIDWIAPFGHNMELYKYMRKKY
                      PYELFRAIRLDESSKTGKIAEFHGGGIDKKLASKIFRQYHHELMSEVKNRQDFNFNIE
@@ -299,7 +282,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Hemolysin A"
                      /protein_id="BAA31774.1"
-                     /db_xref="GI:3337015"
                      /translation="MTVNKIKNIFNNATLTTKSAFNTASSSVRSAGKKLILLIPDNYE
                      AQGVGINELVKAADELGIEIHRTERDDTAIANQFFGAAEKVVGLTERGVAIFAPQLDK
                      LLQKYQKVGSKIGGTAENVGNNLGKAGTVLSALQNFTGIALSGMALDELLRKQREGED
@@ -326,7 +308,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Hemolysin B"
                      /protein_id="BAA31775.1"
-                     /db_xref="GI:3337016"
                      /translation="MMSKCSSHNSLYALILLAQYHNITVNAETIRHQYNTHTQDFGVT
                      EWLLAAKSIGLKAKYVEKHFSRLSIISLPALIWRDDGKHYILSRITKDSSRYLVYDPE
                      QHQSLTFSRDEFEKLYQGKVILVTSRATVVGELAKFDFSWFIPSVVKYRRILLEVLTV
@@ -348,7 +329,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Hemolysin D"
                      /protein_id="BAA31776.1"
-                     /db_xref="GI:3337017"
                      /translation="MRFYMKGLWDLVCRYKTVFSDVWKIRHTLDAPVREKDEYAFLPA
                      HLELIETPVSRRSHFVVWSILLFVIISLLLSVLGKVEVVSVANGKFTHSGRSKEIKPI
                      ENAIVEKIMVKDGSFVKKNDPLVELTVPGVESDILKSEASLLYEKTEQYRYAILSESI
@@ -367,7 +347,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="PapX protein"
                      /protein_id="BAA31777.1"
-                     /db_xref="GI:3337018"
                      /translation="MLLALLSSTDNFCLSSTELSERLDVSRTYITRACDSLEKFGFIK
                      RMESKEDRRSKNIYLTSDGNLYLQRTTRIYGRYLKKYGATLQMMKSKHLK"
      CDS             24316..25056
@@ -377,7 +356,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="recombinase"
                      /protein_id="BAA31778.1"
-                     /db_xref="GI:3337019"
                      /translation="MNNVIPLQNSPERVFLLPIAPGVDFATALSLRRMATSTGATPAY
                      LLAPEVSALLFYMPDQRHHMLFATLWNTGMRIGEARMLTPESFDLDGARPFVRILSEK
                      VRARRGRPPKDEVRLVPLTDISYVRQMESWMITTRPRRREPLWAVTDETMRNWLKQAV
@@ -388,7 +366,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31779.1"
-                     /db_xref="GI:3337020"
                      /translation="MPSPQGRQCTQDLRSIPPVTCERHCQRGSHIQRKHSGINLHRTW
                      IPVTCQGLDDFPGLAVIEHMHDIAVPEGVWCDRNRKVYSVSFGPSDSLLQPVAHGFVG
                      HGP"
@@ -402,7 +379,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="RepFIB"
                      /protein_id="BAA31780.2"
-                     /db_xref="GI:4589743"
                      /translation="MTLTPNNNNTVQPVALMRLGVFVPTLKSLKNSKKNTLSRTDATE
                      ELTRLSLARAEGFDKVEITGPRLDMDNDFKTWVGIIHSFARHNVIGDKVELPFVEFAK
                      LCGIPSSQSSRRLRERISPSLKRIAGTVISFSRTDEKHTREYITHLVQSAYYDTERDI
@@ -414,7 +390,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31781.1"
-                     /db_xref="GI:3337022"
                      /translation="MIPTQVLKSLSISRRGPVISTLSNPSARARERRVSSSVASVRDS
                      VFFLLFFSDLRVGTKTPRRISATGCTVLLLFGVSVTSSPDDLSTSPNSFLMSEFSFSR
                      KPPACGQ"
@@ -423,7 +398,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31782.2"
-                     /db_xref="GI:4589744"
                      /translation="MRQERVLRIKAFRRALELGGGERADGCRHFPRWKTELRNFPHSS
                      CDLASNTLAYYLKERERCHPCIIFMEGNAGFHEAENSTVHGHVIVLLDGEYIDLTLDQ
                      FDEYPDYIPYEPVESDGQIGKLLRNIMKHEDPVKTRQIDLDGGEELYAWLRDTADEVL
@@ -433,7 +407,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="KfrAs"
                      /protein_id="BAA31783.2"
-                     /db_xref="GI:4589745"
                      /translation="MYELYCMYCVFFIPGIRWRHSLRNRSQTMTSLSPDTVRRIEDAA
                      AALIAAGTPNPTNEQVRQHLGGGSLSHISPVMRAFRARQREQATPLPPELAQLLTGQL
                      GLLWQAAVKQAEAGALAAREQADDDIARADKERDEALANVAALESELAVLREVVAERD
@@ -449,7 +422,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="LetA protein"
                      /protein_id="BAA31784.1"
-                     /db_xref="GI:3337025"
                      /translation="MKQRITVTVDSDSYQLLKAYDVNISGLVSTTMQNEARRLRAERW
                      KAENQEGMAEVARFIEMNGSFADENRDW"
      gene            28902..29207
@@ -462,7 +434,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="cytotoxic protein LetB"
                      /protein_id="BAA31785.1"
-                     /db_xref="GI:3337026"
                      /translation="MQFKVYTYKRESRYRLFVDVQSDIIDTPGRRMVIPLASARLLSD
                      KVSRELYPVVHIGDESWRMMTTDMASVPVSVIGEEVADLSHRENDIKNAINLMFWGI"
      CDS             29208..30014
@@ -472,7 +443,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="resolvase"
                      /protein_id="BAA31786.1"
-                     /db_xref="GI:3337027"
                      /translation="MSGSVIHSQSAVMVPAVYSAGQPASLPVAIDYPAALALRQMSMV
                      HDELPKYLLAPEVSALLHYVPNLHRKMLLATLWNTGARINEALALTRGDFSLAPPYPF
                      VQLATLKQRTEKAARTAGRMPAGQQTHRLVPLSDSWYVSQLQTMVATLKIPMERRNRR
@@ -488,7 +458,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="transposase"
                      /protein_id="BAA31787.1"
-                     /db_xref="GI:3337028"
                      /translation="MMPLLDKLREQYGVGPVCSELHIAPSTYYHCQQQRHHPDKRSAR
                      AQHDDWLKREIQRVYDENHQVYGVRKVWRQLLREGIRVARCTVARLMAVMGLAGVLRG
                      KKVRTTISRKAVAAGDRVNRQFVAERPDQLWVADFTYVSTWQGFVYVAFIIDVFAGYI
@@ -503,7 +472,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31788.1"
-                     /db_xref="GI:3337029"
                      /translation="MTKNTRFSPEVRQRAIRMVLESQDEYDSQWAAICSIAPKIGCTP
                      ETLRVWVRQHERDTGGGDGGLTSAERQRLKELERENRELRRSNDILRQASAYFAKAEF
                      DRLWKK"
@@ -517,7 +485,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Rep protein"
                      /protein_id="BAA31789.1"
-                     /db_xref="GI:3337030"
                      /translation="QYRKPDGSGIVSLKIDWIIERYQLPQSYQRMPDFRRRFLQVCVN
                      EINSRTPMRLSYIEKKKGRQTTHIVFSFRDITSMTTG"
      gene            32837..34003
@@ -530,7 +497,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="SopA protein"
                      /protein_id="BAA31790.2"
-                     /db_xref="GI:4589746"
                      /translation="MKLMETLNQCINAGHEMTKAIAIAQFNDDSPEARKITRRWRIGE
                      AADLVGVSSQAIRDAEKAGRLPHPDMEIRGRVEQRVGYTIEQINHMRDVFGTRLRRAE
                      DVFPPVIGVAAHKGGVYKTSVSVHLAQDLALKGLRVLLVEGNDPQGTASMYHGWVPDL
@@ -548,7 +514,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="SopB protein"
                      /protein_id="BAA31791.1"
-                     /db_xref="GI:3337032"
                      /translation="MKRAPVIPKHTLNTQPVEDTSLSTPAAPMVDSLIARVGVMARGN
                      AITLPVCGRDVKFTLEVLRGDSVEKTSRVWSGNERDQELLTEDALDDLIPSFLLTGQQ
                      TPAFGRRVSGVIEIADGSRRRKAAALTESDYRVLVGELDDEQMAALSRLGNDYRPTSA
@@ -562,7 +527,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="reverse transcriptase"
                      /protein_id="BAA31792.1"
-                     /db_xref="GI:3337033"
                      /translation="MTEQATTCKGASLLNGDSWHSINWRQCYREVRRLQARIVKATRE
                      GKHGKVKSLQWILTHSFSGRAVAVRRVTENSGKRTPGVDGQTWSSPEVKFLAINLLKR
                      RGYKPQPLKRVYIPKSNGKSRPLGIPTMKDRAMQALYLLALEPVAEVTADQRSFGFRT
@@ -579,7 +543,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31793.1"
-                     /db_xref="GI:3337034"
                      /translation="MYFSGEPAQIAEIKRLASGAVTPLYRRATNEGIQLFLAGSAGLL
                      QTTEDVRFEPCPGLTAAGRGVVSPENIAFTRWLTHLQDGVLLDEQNCLMLHELWLQSG
                      TGRRRWEELPDDARESITALFTPKRGDWCDIWSNEDVSVWWNRLCDNVLPEKTMPFDL
@@ -591,7 +554,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31794.1"
-                     /db_xref="GI:3337035"
                      /translation="MTETGGQPPVSFPVKDVAGLLFLLRRLTRRGRNAACGQCPASGR
                      ARDGRFYRSRLASVTVYASPSPFSDERPSSRFRGIFSPSKRRRLRYSTVGLTRYRTR"
      CDS             39363..40046
@@ -602,7 +564,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="hemagglutinin-associated protein"
                      /protein_id="BAA31795.1"
-                     /db_xref="GI:3337036"
                      /translation="MSRFIQGDCVRVMATIPGNGVDFILTDPPYLVGFRDRQGRTIAG
                      DKTDEWLQPACNEMYRVLKKDALMVSFYGWNRVDRFMAAWKNAGFSVVGHLVFTKTYT
                      SKAAYVGYRHECAYILAKGRPALPQKPLPDVLGWKYSGNRHHPTEKPVTSLQPLIESF
@@ -613,7 +574,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31796.1"
-                     /db_xref="GI:3337037"
                      /translation="MCLLNAWHARRCIAPIACSWRRIPKFWNWMRALKIEKETRMYGT
                      CETLCRELAAKYPGYTPLMLVIWSPEEIQALADGMDISLSDPEIRTVLARLEDIPEDQ
                      RIESGISSAAAMEIISNVSENRQVTVPAELLASLIQTAEQALWKREWAARDYGLAVPE
@@ -623,7 +583,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31797.1"
-                     /db_xref="GI:3337038"
                      /translation="MNENTTLNALICRHARNLLLAQGWPEETDVDQRNPKYPGWISIY
                      VLLDAPRLATLLVNRHGGVLPPHLASAIQKLTGTGAELVLSGSQWQSLPVLPADGTQV
                      SFPYAGEWLTEDEIRAVLAAVRDAVRSVSCRVAEDTRRIRAALTTTGQTLLTRQTRRF
@@ -634,7 +593,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31798.2"
-                     /db_xref="GI:4589747"
                      /translation="MCCVYRMNRPAGGLTVVFCGRWSGKPGTKSAAWRMPWQKSGNDD
                      VGGVNPRLFPAGPRTEHKGSRRWLRFTRPCRAWPCGFSVMWPQRRVRAVPCLHLSRAG
                      VDARVRFAAAVTRSLLPVCRDFPVVRPLRFRGLTLQLPSAVCVRLRLPLRPVHPRLIA
@@ -648,7 +606,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="antirestriction protein KlcA"
                      /protein_id="BAA31799.1"
-                     /db_xref="GI:3337040"
                      /translation="MMPEYQGGFWHFIRLPDGGGYMMPDGDRFHMVNGANWFDRTVSA
                      DACGIILTSLVINRQLWLYHDSGDAGLTQLYRMRDAQLWRHIEFHPECNAIYAALD"
      CDS             42428..42850
@@ -656,7 +613,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31800.1"
-                     /db_xref="GI:3337041"
                      /translation="MYCTVKEIIRDVLDTDVPDSECVFAVVLTRGDVRHIAQDWNLSD
                      DELETVMQRLDDAFEYGADVSIVHDVVRELMEEKRASRQVTVPAVMLEKVMALAGSEM
                      KRLYAVGSENGGDGDAFVREEREAMDVVLQALDGEHMS"
@@ -665,7 +621,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31801.1"
-                     /db_xref="GI:3337042"
                      /translation="MCPECFFLMLFFCGYRACYCSSSFSSSSSSSSFRSSPAYGFSGR
                      PPGGAGCRERSQRSCLRPGGLPSLTRNPGLQRPFRSRSLCRAVACAPGIPAKGRRDVR
                      GNAVSQTALHVVAAGPCSLPAGCHTPV"
@@ -674,7 +629,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31802.2"
-                     /db_xref="GI:4589748"
                      /translation="MTVSIVSPSAAAVKPRRHPRFRREDIPAPEIDPVLKAFGRHIAR
                      SFHRGRGVHIPAMKNTAFGQVLRTLELKRAFN"
      CDS             44316..45677
@@ -682,7 +636,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31803.1"
-                     /db_xref="GI:3337044"
                      /translation="MTSAAITMTAPEAASPVQMYRATYSPDDNKLRLYAVSRLDPETY
                      KKVHDAGFRWAPKQALFVAPAWTPGREDVLLSLAGEIEDEDSTLAERQEARAERFTGY
                      SGKRASESAQALDEVERLAAMIPPGQPILVGHHSERRARRDAQRIENGMKRAVMLFER
@@ -697,7 +650,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31804.1"
-                     /db_xref="GI:3337045"
                      /translation="MHSQLKERIRLMRARLDNAAPVAEIRAESQLFVTPAPVCDRLVT
                      LAEISNRDHILEPSAGTGAILRAIRDTAPEAMCDAVEINSGLVRYLRENFNGVRVQCG
                      DFMEWQPVQYYSRVIINPPFSHGQDIRHILRAFSLLRPGGVLVAVCLNGPRQQEKLLP
@@ -707,7 +659,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31805.1"
-                     /db_xref="GI:3337046"
                      /translation="MAPDTTTGRHPPQRREARFAKRRCPLHPGGLLPGCRERRPRRDR
                      GGATGTVAASPGFASGMEARQGGDSSAGSVHDSPPRQGDARKRHKQENNKTDSNQSSR
                      KKKNSSSSSSSSSSSSSSMNNNIISNRQMTGLKRQKPTAECPRNVRGGA"
@@ -721,7 +672,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="single-strand binding protein"
                      /protein_id="BAA31806.1"
-                     /db_xref="GI:3337047"
                      /translation="MAVRGINKVILVGRLGKDPEVRYIPNGGAVANLQVATSESWRDK
                      QTGEMREQTEWHRVVLFGKLAEVAGEYLRKGAQVYIEGQLRTRSWEDNGITRYVTEIL
                      VKTTGTMQMLVRAAGAQTQPEEGQQFSGQPQPQPPEGDDYGFSDDIPF"
@@ -730,7 +680,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31807.1"
-                     /db_xref="GI:3337048"
                      /translation="MSVTESKAKTERKSSRKPAKTQETVLSALLAQTEEVSVPLASLI
                      KSPLNVRTVPYSAESVSELADSIKGVGLLQNLVVHALPGDRYGVAAGGRRLAALNMLA
                      ERDIIPADWPVRVKVIPQELATAASMTENGHRRDMHPAEQIAGFRAMAQEGKTPAQIG
@@ -752,7 +701,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31808.1"
-                     /db_xref="GI:3337049"
                      /translation="MKTELTLNVLHTMNAQEYEDIRAAGSDARRELTHAVMRELDAPD
                      NWTMNGEYGSEFGGFFPVQVRFTPAHERFHLALCSPGDVSQVWVLVLVNAGGEPFAVV
                      QVQRRFAPEAVSHSLALAASLDTQGYSVNDIIHILMAEGGQV"
@@ -765,7 +713,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31809.1"
-                     /db_xref="GI:3337050"
                      /translation="MSARSQALVPLSTEQQAAWRAVAETEKRRNQGNTLAEYPYAGAF
                      FRCLNGSRRISLSDLRFFMPSLTAEELHGNRLQWLYAIDVLIETQGEVCLLPLPGDAA
                      ERLFPSVRFCVRERSRHKSALVMQKYSRQQAREAEQKARAYQALVAQAEIELAFHSPE
@@ -781,7 +728,6 @@ FEATURES             Location/Qualifiers
                      /product="Stable plasmid inheritance protein (F leading
                      maintenance protein)"
                      /protein_id="BAA31810.1"
-                     /db_xref="GI:3337051"
                      /translation="MKLPRSSLVWCVLIVCLTLLIFTYLTRKSLCEIRYRDGYREVAA
                      FMAYESGK"
      gene            51715..53688
@@ -794,7 +740,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="NikB"
                      /protein_id="BAA31811.2"
-                     /db_xref="GI:4589749"
                      /translation="MSIAGLREEPAQDWLSLHKRLASDGLYITMQEGELVVKDGWDRA
                      REGVALSSFGPLWTAEKLGRKLGEYQPVPTDIFSQVGTPGRYDPEAINVDIRPEKVAE
                      TESLKQYACRHFAERLPEMARNGELESCLDVHRTLATAGLWMGIQHGHLVLHDGFDKQ
@@ -812,7 +757,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31812.1"
-                     /db_xref="GI:3337053"
                      /translation="MVLRSIWVEEQYMGVKKIVILAILVSFVAGCAPLHPSNCHKTTA
                      LGSCSSGRWDDQDEWGEQARGIRDAINAKLDDPQKWKRKKCRLHMEFSRDGTALKIST
                      SNGDKAYCEAIKSAAHKAKFPAFNNPEVYRDFQKSGFDMRG"
@@ -825,7 +769,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="transposase Tra5"
                      /protein_id="BAA31813.1"
-                     /db_xref="GI:3337054"
                      /translation="MDELRAQGYHFKVKTVTESLRRHGLRAKASWNFSPVCYRAHSQP
                      VSENLLEQDFYASGPNQKWAGDITYLRTDEGWPYLAVVTCHYWLINVVTHDGTGAPGT
                      LCYRMSFAKMTDRYTSI"
@@ -839,7 +782,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="transposase"
                      /protein_id="BAA31814.1"
-                     /db_xref="GI:3337055"
                      /translation="MLSREDFYMIKQMRQQGAYIVDIATQIGCSERTVRRYLKYPEPP
                      ARKTRHKMAEMDYIDMRLAENVWNGEVILAEIKAMGYTGGRSMLLRQFRKTPEQRFTQ
                      EHSLFFRLLNRRYEKASIVLTSNKGFADWGRDVR"
@@ -852,7 +794,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Toxin B"
                      /protein_id="BAA31815.1"
-                     /db_xref="GI:3337056"
                      /translation="MIHPGSSLDKAINNTRVKNVSTDVKHGQIQERKRNFIYKKNDDI
                      SSRFKLYSSLVKQKNATEDVVLIGKMILDEVRSYRTIHNDRNIVSNSGNWKTSFLCNL
                      ARLLYSIFNGSNYFCSREGENNSSPSSTLLTIHQPEKQELLQQKSIKHLPTSNNIDGY
@@ -917,7 +858,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="transposase Tra5"
                      /protein_id="BAA31816.1"
-                     /db_xref="GI:3337057"
                      /translation="MDELRAQGYHFKVKTVTESLRRHGLRAKASWNFSPVCYRAHSQP
                      VSENLLEQDFYASGPNQKWAGDITYCVPGVQGEHGGSNEPRVCLEY"
      gene            complement(65781..66284)
@@ -929,7 +869,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31817.1"
-                     /db_xref="GI:3337058"
                      /translation="MTKNTRFSPEVRQRAVRMVLESQGEYDSQWAAICSIAPKIGCTP
                      ETLRVWVRQHERDTGSGDGGLTTAERQRLKELERENRELRVQFFRLLNRRYEKASIIL
                      TSNKGFADWGEMFGEHVLATAILDRLLHHSTTLNIKGESYRFNIPDRLVVHLSLHARP
@@ -943,7 +882,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="helicase I"
                      /protein_id="BAA31818.1"
-                     /db_xref="GI:3337059"
                      /translation="SPGFPGRFNHRIAGISRDDGLITLQDAEGNTRLISPREAVAEGV
                      TLYPPDTIRVGTGDRMRFTKSDRGRGYVANSVWTVTAVSGDSVTLSGGQQTRVIRPAQ
                      ERAEQHIDLAYAITAHGAQGASETFAIALEGTEGSRKLMAGFESAYVALSRMKQHVQV
@@ -962,7 +900,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="TraX protein"
                      /protein_id="BAA31819.1"
-                     /db_xref="GI:3337060"
                      /translation="MTTDNTNTTRNDSLAARTDTWLQSLLVWSPGQRDIIKTVALVLM
                      VLDHANRILHLDQTWMFLAGRGAFPLFALVWGLNLSRHAHIRQSAINRLWGWGIIAQF
                      AYYLAGFPWYEGNILFAFAVAAQVLTWCETRSGWRTAAAILLMALWGPLSGTSYGIAG
@@ -975,7 +912,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31820.1"
-                     /db_xref="GI:3337061"
                      /translation="MKITDHKLSEGIALTFRVPEGNIKHPLIILCHGFCGIRNVLLPC
                      FANAFTEAGFATITFDYRGFGESDGERGRLVPAMQTEDIISVINWAEKQECIDNQRIG
                      LWGTSLGGGHVFSAAAQDQRVKCIVSQLAFADGDVLVTGEMNESERASFLSTLNKMAE
@@ -992,7 +928,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="fertility inhibition protein"
                      /protein_id="BAA31821.1"
-                     /db_xref="GI:3337062"
                      /translation="MAEQKRPVLTLKRKTEGETPVRSRKTIINVTTPPKWKVKKQKLA
                      EKAAREAELAAKKAQARQALSIYLNLPTQDEAVNTLKPWWPGLFDGDTPRLLACGIRD
                      VLLEDVAQRNIPLSHKKLRRALKAITRSESYLCAMKAGACRYDTEGYVTEHISQEEEA
@@ -1004,7 +939,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31822.1"
-                     /db_xref="GI:3337063"
                      /translation="MRKYIPLVLFIFSWPVLCADIHGRVVRVLDGDTIEVMDSRKAVR
                      IRLVNIDAPEKKQDYGRWSTDMMKSLVAGKTVTVTYFQRDRYGRMLGQVYAPDGMNVN
                      QFMVRAGAAWVYEQYNTDPVLPVLQNEARQQKRGLWSDADPVPPWIWRHRK"
@@ -1014,7 +948,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31823.1"
-                     /db_xref="GI:3337064"
                      /translation="MKLIIFILIVLIIAALLIRIILRSVNQHSPLLMQLHAAGIRTGD
                      AERILSGGEYDASHLRPERRRRDILLEEVLRQAGIPLLRSHDARKLLQMTGEWLNTTG
                      AAQQSPEHRS"
@@ -1027,7 +960,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Replication protein"
                      /protein_id="BAA31824.1"
-                     /db_xref="GI:3337065"
                      /translation="MSQTENAVTSSSGAKRAYRKGNPLSDAEKQRLSVARKRASFKEV
                      KVFLEPKYKAMLMQMCHEDGLTQAEVLTALIKSEAQKRCV"
      gene            72556..73413
@@ -1038,7 +970,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Replication protein"
                      /protein_id="BAA31825.1"
-                     /db_xref="GI:3337066"
                      /translation="MTDLQQTYYRQVKNPNPVFTPREGAGTLKFCEKLMEKAVGFTSR
                      FDFAIHVAHARSKGLRRRMPPVLRRRAIDALLQGLCFHYDPLANRVQCSITTLAIECG
                      LATESAAGKLSITRATRALTFLSELGLITYQTEYDPLIGCYIPTDITFTPALFAALDV
@@ -1050,7 +981,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31826.1"
-                     /db_xref="GI:3337067"
                      /translation="MQMKNNTAQATKVITAHVPLPMADKVDQMAARLERSRGWVIKQA
                      LSAWLAQEEERNRLTLEALDDVTSGQVIDHQAVQAWADSLSTDNPLPVPR"
      CDS             74609..74884
@@ -1058,7 +988,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31827.1"
-                     /db_xref="GI:3337068"
                      /translation="MELKWSSKALSDLARLYDFLVLASKPAAARTVQSLTQAPVILLT
                      HPRMGEQLFQFEPREVRRIFAGEYEIRYELNGQTIYVLRLWHTRENR"
      CDS             74979..75185
@@ -1068,7 +997,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31828.1"
-                     /db_xref="GI:3337069"
                      /translation="MNYDEITKITAERISDYMTEAVNTDSIAVAEMFHNAAWGVRTLW
                      FELVTKIDIDIHKKNRYASYDLDR"
      gene            complement(75270..>75650)
@@ -1081,7 +1009,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="transposase"
                      /protein_id="BAA31829.1"
-                     /db_xref="GI:3337070"
                      /translation="YGNTLRFSTIVSVVTLVWGISPRQPSGKNIIRWLLKKRTNGSVR
                      YCQYTSPDLVIPDALAAEGSSKRDRNRFLDSHYRRGWNVNVSRVMDNATHVAVYFGSY
                      LKKPPVPMSRLEHYAGQDEIDPFN"
@@ -1093,7 +1020,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31830.1"
-                     /db_xref="GI:3337071"
                      /translation="KSLLPALRSEGWRTVDTVSAESGSRLSVAAYCVHTSLPVLVPGV
                      PQPVVTGRDEPHCCGCDTGNLPPGRCATTNSNHNLPVAPNLLNQTFAPAAPNQVWVAD
                      LTYVATQEGWLYLAGIKDVYTCEIVGYAMGERMTKELTGKALFMALRSQRPPAGLIHH
@@ -1109,7 +1035,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="transposase"
                      /protein_id="BAA31831.1"
-                     /db_xref="GI:3337072"
                      /translation="MLPRFADIFQQGNRWLNWLEKQPEGSVRPVVIESVTKIMACGTT
                      LMGYTQWCCSSPDCSHIKKVCFRCKSRSCPHCGVKAGAQWIQYLLSLVPDCPWQHIVF
                      TLPCQYWSLVFHNRWLLAEMSRIAADVIQEICRQADVRLRTRTTICQLRQIC"
@@ -1121,7 +1046,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="Catalase-peroxidase"
                      /protein_id="BAA31832.1"
-                     /db_xref="GI:3337073"
                      /translation="MIKKTLPVLILLALSGSFSTAVAADKKETQNFYYPETLDLTPLR
                      LHSPESNPWGADFDYATRFQQLDMEALKKDIKDLLTTSQDWWPADYGHYGPFFIRMAW
                      HGAGTYRTYDGRGGASGGQQRFEPLNSWPDNVNLDKARRLLWPVKKKYGSSISWGDLM
@@ -1140,7 +1064,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31833.1"
-                     /db_xref="GI:3337074"
                      /translation="FLCGGITVAEELDESMQVLARNMSVLQSSMDKKELLEALDRMDD
                      AVDESMKRLPESISPADEEGKNDYIKELQKLEKEIMLAKQKVLSGQLSDIPDSVNKMN
                      KIRVEGHDKFR"
@@ -1154,7 +1077,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="transposase"
                      /protein_id="BAA31834.1"
-                     /db_xref="GI:3337075"
                      /translation="MPLLDKLREQYGVGPVCSELHIAPSTYYHCQQQRHHPDKRSARA
                      QRDDWLKREIQRVYDENHQVYGVRKVWRQLLREGIRVARCTVARLMAVMGLAGVLRGK
                      KIRTTVSRKAVSAGDRVNRQFVAERPDQLWVADFTYVSTWQGFVYVAFIIDVFAGCIV
@@ -1170,7 +1092,6 @@ FEATURES             Location/Qualifiers
                      /transl_table=11
                      /product="serine protease EspP"
                      /protein_id="BAA31836.1"
-                     /db_xref="GI:3337077"
                      /translation="MNKIYSLKYSHITGGLIAVSELSGRVSSRATGKKKHKRILALCF
                      LGLLQSSYSFASQMDISNFYIRDYMDFAQNKGIFQAGATNIEIVKKDGSTLKLPEVPF
                      PDFSPVANKGSTTSIGGAYSITATHNTKNHHSVATQNWGNSTYKQTDWNTSHPDFAVS
@@ -1199,7 +1120,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31837.1"
-                     /db_xref="GI:3337078"
                      /translation="MLRWSEVREMRDSGLVEFHVHTHSHKRWDRLSVSRAEQCRLMKE
                      DILVGKQCLTEKLGFCSSHLCWPEGYYNRDYINLAGKLGFSYLYTTERRMNCPENGSL
                      RIGRISTKEREHSGWLKRRLFYYTTPLFSSVLALHKGPRLPDN"
@@ -1209,7 +1129,6 @@ FEATURES             Location/Qualifiers
                      /codon_start=1
                      /transl_table=11
                      /protein_id="BAA31838.1"
-                     /db_xref="GI:3337079"
                      /translation="MMKILFTESSSDIGGQELQALAQMTALQKQGHSVLLACREKSKI
                      APEARKRGHDVTFIPFRNSLHLPSILRLRRIIGEFKPDLVICHSGHDSNIAGLSRLIC
                      CHRFSIVRQKTYITRKTRTFSLNYLCDFIVVPSSAMMAHLMAEGVRTPVTVIPPGFDW
@@ -1224,7 +1143,6 @@ FEATURES             Location/Qualifiers
                      /product="hypothetical 66.6 kD protein in FRWD-PPC
                      intergenic region"
                      /protein_id="BAA31839.1"
-                     /db_xref="GI:3337080"
                      /translation="MHLNTGQNRPTFSWSALGWAIFYFGFFSTLLQVIIFSSGYSGTN
                      GIRDSLLFSCLWLIPVFLYPDRIKIIAAVVGFILWGTSLAALCYYFLYGHEFSQSVLF
                      VMFETNAREAGEYFSQYFSLKLLLISLVYTAVSVFLWTRLRPVYIPLPWRRIVSFLLL
@@ -1243,7 +1161,6 @@ FEATURES             Location/Qualifiers
                      /product="Lipid A biosynthesis (Kdo)2-(lauroyl)-lipid IVA
                      acyltransferase"
                      /protein_id="BAA31840.1"
-                     /db_xref="GI:3337081"
                      /translation="MVPPSAVLCYHNEISRQIPVNMKNIRTEFIPRFNLTLCFPRYWM
                      TWTGIGIICVFAMVPPALRDPLLGKLGMLVGRLGKSARQRALINLSLCFPEYSDKEKE
                      NIVDAMFATASMAVVLMAELALSGPDKISHRIRWNGLEIVEKMAQNNEKVIFLVPHAW
