@@ -59,8 +59,8 @@ def compare_annotation(algo1, algo2):
 
 def main():
     # read files into GenbankRecord objects
-    alg1 = GenbankRecord("./files/sequence.gb", "Genbank")
-    alg2 = GenbankRecord("./files/prodigal/e_coli_O157_H7.gbk", "Prodigal")
+    alg1 = GenbankRecord("./files/genbank_annotation.gb", "Genbank")
+    alg2 = GenbankRecord("./files/prodigal_annotation.gb", "Prodigal")
 
     # store summary and results
     summary, results = compare_annotation(alg1, alg2)
