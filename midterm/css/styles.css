@@ -9,6 +9,7 @@ body {
 table#summary {
     border-collapse: collapse;
     float: left;
+    position: fixed;
     width: 28%;
 }
 
@@ -36,6 +37,7 @@ table#results {
     border: 2px solid rgb(80, 80, 80);
     float: right;
     width:70%;
+    margin-bottom: 10px;
 }
 
 table#results th {
