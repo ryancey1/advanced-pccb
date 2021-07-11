@@ -77,7 +77,7 @@ def check_environment():
             f'wget -O files/{FASTA_FILE} "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id={GENBANK_ACCESSION}&retmode=text&rettype=fasta" >/dev/null 2>&1')
     if not os.path.isfile(f'files/{PRODIGAL_ANNOTATION}'):
         os.system(
-            'prodigal -i files/e_coli_O157_H7.fasta -o files/prodigal_annotation.gb -p meta >/dev/null 2>&1')
+            './prodigal -i files/e_coli_O157_H7.fasta -o files/prodigal_annotation.gb -p meta >/dev/null 2>&1')
 
 
 def main():
