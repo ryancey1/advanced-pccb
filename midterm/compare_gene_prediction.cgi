@@ -3,6 +3,13 @@
 from genbank import *
 from collections import namedtuple
 import jinja2
+import os
+
+# global variables
+FASTA_FILE = "e_coli_O157_H7.fasta"
+GENBANK_ACCESSION = "AB011549.2"
+GENBANK_ANNOTATION = "genbank_annotation.gb"
+PRODIGAL_ANNOTATION = "prodigal_annotation.gb"
 
 
 def compare_annotation(algo1, algo2):
@@ -57,7 +64,26 @@ def compare_annotation(algo1, algo2):
                    mismatch_5, mismatch_3, len(ref_copy), len(pred_copy)), results
 
 
+def check_environment():
+    """Ensures proper directory structure and downloads necessary input files from NCBI (redirects STDOUT and STERR -- to allow CGI script)"""
+    if not os.path.isdir('files'):
+        os.mkdir('files')
+    # make annotation/seq files if they don't exist
+    if not os.path.isfile(f'files/{GENBANK_ANNOTATION}'):
+        os.system(
+            f'wget -O files/{GENBANK_ANNOTATION} "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id={GENBANK_ACCESSION}&retmode=text&rettype=gb" >/dev/null 2>&1')
+    if not os.path.isfile(f'files/{FASTA_FILE}'):
+        os.system(
+            f'wget -O files/{FASTA_FILE} "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id={GENBANK_ACCESSION}&retmode=text&rettype=fasta" >/dev/null 2>&1')
+    if not os.path.isfile(f'files/{PRODIGAL_ANNOTATION}'):
+        os.system(
+            'prodigal -i files/e_coli_O157_H7.fasta -o files/prodigal_annotation.gb -p meta >/dev/null 2>&1')
+
+
 def main():
+    # make sure the files are there and in proper directory
+    check_environment()
+
     # read files into GenbankRecord objects
     alg1 = GenbankRecord("./files/genbank_annotation.gb", "Genbank")
     alg2 = GenbankRecord("./files/prodigal_annotation.gb", "Prodigal")
