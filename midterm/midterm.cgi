@@ -8,7 +8,7 @@ import jinja2
 def compare_annotation(algo1, algo2):
     # named tuples to store information
     Summary = namedtuple(
-        "Summary", "Reference_Count Predicted_Count Exact_Match Start_Mismatch Stop_Mismatch Unique_To_Reference UniqueToPrediction")
+        "Summary", "ref_count pred_count exact_match start_mismatch stop_mismatch unique_to_reference unique_to_prediction")
     Results = namedtuple(
         "Results", "ref_start pred_start start_agrees ref_stop pred_stop stop_agrees")
     # set up counters and a storage list
@@ -66,7 +66,6 @@ def main():
     # jinja2 setup
     templateloader = jinja2.FileSystemLoader(searchpath='./templates')
     env = jinja2.Environment(loader=templateloader)
-    env.globals.update(zip=zip)
     template = env.get_template('midterm.html')
 
     # cgi print statements, pass seqs list in the render call
