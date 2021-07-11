@@ -4,12 +4,15 @@ from genbank import GenbankRecord
 from collections import namedtuple
 import jinja2
 import os
+import argparse
 
-# global variables
-FASTA_FILE = "e_coli_O157_H7.fasta"
-GENBANK_ACCESSION = "AB011549.2"
-GENBANK_ANNOTATION = "genbank_annotation.gb"
-PRODIGAL_ANNOTATION = "prodigal_annotation.gb"
+
+def parseArgs():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "-a", "--accession", default="AB011549.2",
+        help="The accession number of the annotation to be compared/downloaded (default: AB011549.2).")
+    return parser.parse_args()
 
 
 def compare_annotation(algo1, algo2):
@@ -66,6 +69,15 @@ def compare_annotation(algo1, algo2):
 
 def check_environment():
     """Ensures proper directory structure and downloads necessary input files from NCBI (redirects STDOUT and STERR -- to allow CGI script)"""
+    global GENBANK_ANNOTATION, PRODIGAL_ANNOTATION
+
+    args = parseArgs()
+
+    GENBANK_ACCESSION = args.accession
+    FASTA_FILE = f"{GENBANK_ACCESSION}.fasta"
+    GENBANK_ANNOTATION = f"gb_{GENBANK_ACCESSION}_annotation.gb"
+    PRODIGAL_ANNOTATION = f"pr_{GENBANK_ACCESSION}_annotation.gb"
+
     if not os.path.isdir('files'):
         os.mkdir('files')
     # make annotation/seq files if they don't exist
@@ -77,16 +89,19 @@ def check_environment():
             f'wget -O files/{FASTA_FILE} "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id={GENBANK_ACCESSION}&retmode=text&rettype=fasta" >/dev/null 2>&1')
     if not os.path.isfile(f'files/{PRODIGAL_ANNOTATION}'):
         os.system(
-            './prodigal -i files/e_coli_O157_H7.fasta -o files/prodigal_annotation.gb -p meta >/dev/null 2>&1')
+            f'./prodigal -i files/{FASTA_FILE} -o files/{PRODIGAL_ANNOTATION} -p meta >/dev/null 2>&1')
 
 
 def main():
-    # make sure the files are there and in proper directory
+    # make sure the files are there and in proper directory, return
+    # accession of current record
     check_environment()
 
     # read files into GenbankRecord objects
-    alg1 = GenbankRecord("./files/genbank_annotation.gb", "Genbank")
-    alg2 = GenbankRecord("./files/prodigal_annotation.gb", "Prodigal")
+    alg1 = GenbankRecord(
+        f'./files/{GENBANK_ANNOTATION}', 'Genbank')
+    alg2 = GenbankRecord(
+        f'./files/{PRODIGAL_ANNOTATION}', 'Prodigal')
 
     # store summary and results
     summary, results = compare_annotation(alg1, alg2)
