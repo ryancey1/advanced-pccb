@@ -11,67 +11,52 @@
 
 <body>
     <h1>Midterm: CDS Prediction Comparison</h1>
-    <!-- generate the table for our answer -->
-    <h2>Summary of results</h2>
-    <li>
-        <ul>Reference annotation source: {{ summary.ref_name }}</ul>
-        <p>Prediction annotation source: {{ summary.pred_name }}</p>
-        <table>
-            <tr>
-                <th>Category</th>
-                <th>Count</th>
-            </tr>
-            <tr>
-                <td>Reference CDS Count</td>
-                <td>{{ summary.ref_count }}</td>
-            </tr>
-            <tr>
-                <td>Prediction CDS Count</td>
-                <td>{{ summary.pred_count }}</td>
-            </tr>
-            <tr>
-                <td>Reference-Prediction Exact Matches</td>
-                <td>{{ summary.exact_match }}</td>
-            </tr>
-            <tr>
-                <td>Reference-Prediction 5' agrees, 3' disagrees</td>
-                <td>{{ summary.stop_mismatch }}</td>
-            </tr>
-            <tr>
-                <td>Reference-Prediction 5' disagrees, 3' agrees</td>
-                <td>{{ summary.start_mismatch }}</td>
-            </tr>
-            <tr>
-                <td>{{ summary.ref_name }} unique</td>
-                <td>{{ summary.unique_to_reference }}</td>
-            </tr>
-            <tr>
-                <td>{{ summary.pred_name }} unique</td>
-                <td>{{ summary.unique_to_prediction }}</td>
-            </tr>
-        </table>
-        <hr />
-        <h2>Results</h2>
-        <table>
-            <tr>
-                <th>Reference Start</th>
-                <th>Predicted Start</th>
-                <th>Agree/Disagree</th>
-                <th>Reference Stop</th>
-                <th>Predicted Stop</th>
-                <th>Agree/Disagree</th>
-            </tr>
-            {%- for result in results %}
-            <tr>
-                <td>{{ result.ref_start }}</td>
-                <td>{{ result.pred_start }}</td>
-                <td>{{ result.start_agrees }}</td>
-                <td>{{ result.ref_stop }}</td>
-                <td>{{ result.pred_stop }}</td>
-                <td>{{ result.stop_agrees }}</td>
-            </tr>
-            {%- endfor %}
-        </table>
+    <!-- generate summary table -->
+    <table id="summary">
+        <tr id="title">
+            <th id="table-title" colspan="2">Summary</th>
+        </tr>
+        {%- for field, value in summary %}
+        <tr>
+            <td><i><b>{{ field.replace("_", " ") }}</b></i></td>
+            <td>{{ value }}</td>
+        </tr>
+        {%- endfor %}
+        <tr>
+            <td id="linkout"></td>
+        </tr>
+        <tr>
+            <td id="linkout"><a href="{{ ref.file }}" target="_blank">{{ ref.name }} source</a></td>
+            <td id="linkout"><a href="{{ pred.file }}" target="_blank">{{ pred.name }} source</a></td>
+        </tr>
+    </table>
+
+    <!-- generate results table -->
+    <table id="results">
+        <tr>
+            <th id="table-title" colspan="7">Results</th>
+        </tr>
+        <tr>
+            <th id="cds">CDS</th>
+            <th>Reference Start</th>
+            <th>Predicted Start</th>
+            <th>Start Agreement</th>
+            <th>Reference Stop</th>
+            <th>Predicted Stop</th>
+            <th>Stop Agreement</th>
+        </tr>
+        {%- for result in results %}
+        <tr>
+            <td id="cds-number"><b>{{ loop.index }}</b></td>
+            <td>{{ result.ref_start }}</td>
+            <td><i>{{ result.pred_start }}</i></td>
+            <td id="{{ 'agrees' if result.start_agrees=='AGREES' else 'disagrees' }}">{{ result.start_agrees }}</td>
+            <td>{{ result.ref_stop }}</td>
+            <td><i>{{ result.pred_stop }}</i></td>
+            <td id="{{ 'agrees' if result.stop_agrees=='AGREES' else 'disagrees' }}">{{ result.stop_agrees }}</td>
+        </tr>
+        {%- endfor %}
+    </table>
 </body>
 
 </html>

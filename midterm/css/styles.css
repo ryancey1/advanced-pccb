@@ -1,14 +1,76 @@
-td {
+h1 {
+    text-align: center;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+table#summary {
+    border-collapse: collapse;
+    float: left;
+    width: 28%;
+}
+
+table#summary td {
     border: 2px solid rgb(80, 80, 80);
     padding: 5px;
 }
 
-table {
-    border-collapse: collapse;
+table#summary td#linkout {
+    border: 0;
+    padding: 5px;
 }
-
-th {
+/* 
+table#summary th {
     text-align: left;
     border: 2px solid rgb(80, 80, 80);
     padding: 5px;
+} */
+
+table#results {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    border: 2px solid rgb(80, 80, 80);
+    float: right;
+    width:70%;
+}
+
+table#results th {
+    border: 2px solid rgb(80, 80, 80);
+    padding: 5px;
+}
+
+table#results td {
+    border: 2px solid rgb(80, 80, 80);
+    padding: 2px;
+    text-align: center;
+}
+
+th#table-title {
+    background-color: rgb(255, 228, 181);
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid rgb(80, 80, 80);
+    padding: 5px;
+}
+
+/* th#table-title {
+    font-size: 24px;
+    text-align: center;
+    padding: 5px;
+} */
+
+th#cds, td#cds-number {
+    background-color: rgb(255, 255, 224);
+}
+
+td#agrees {
+    color: rgb(0, 128, 0)
+}
+
+td#disagrees {
+    color: rgb(255, 0, 0)
 }
