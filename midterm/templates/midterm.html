@@ -1,4 +1,52 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- reference external css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Midterm</title>
+</head>
+
+<body>
+    <h1>Midterm: CDS Prediction Comparison</h1>
+    <!-- generate the table for our answer -->
+    <h2>Summary of results</h2>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Count</th>
+        </tr>
+        {%- for category, value in summary._fields|zip(summary) $}
+        <tr>
+            <td>{{ category }}</td>
+            <td>{{ value }}</td>
+        </tr>
+        {%- endfor %}
+    </table>
+    <hr />
+    <h2>Results</h2>
+    <table>
+        <tr>
+            <th>Reference Start</th>
+            <th>Predicted Start</th>
+            <th>Agree/Disagree</th>
+            <th>Reference Stop</th>
+            <th>Predicted Stop</th>
+            <th>Agree/Disagree</th>
+        </tr>
+        {%- for result in results %}
+        <tr>
+            <td>{{ result.ref_start }}</td>
+            <td>{{ result.pred_start }}</td>
+            <td>{{ result.start_agrees }}</td>
+            <td>{{ result.ref_stop }}</td>
+            <td>{{ result.pred_stop }}</td>
+            <td>{{ result.stop_agrees }}</td>
+        </tr>
+        {%- endfor %}
+    </table>
+</body>
 
 </html>

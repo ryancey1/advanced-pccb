@@ -2,136 +2,62 @@
 import re
 
 
-class Feature:
-    def __init__(self, feature: str, strand: int, operator: str, location: str):
-        self.feature = feature
-        self.strand = strand
-        self.operator = operator
-        self.__string = location
-        self.start = self.parse_location(self.__string)['start']
-        self.end = self.parse_location(self.__string)['end']
-        self.location_flag = self.parse_location(self.__string)['flag']
-
-    def fprint(self):
-        print(*vars(self))
-
-    def split(self):
-        pass
-
-    def parse_location(self, location):
-        return {
-            'start': int(location.split("..")[0].replace('<', '')),
-            'end': int(location.split("..")[1].replace('>', '')),
-            'flag': 'trunc-start' if location.split("..")[0].startswith('<') else 'trunc-end' if location.split("..")[1].startswith('>') else "complete"
-        }
-
-
 class GenbankRecord:
-    def __init__(self, file):
+    """A class that stores annotation records in a readable JSON format"""
+
+    def __init__(self, file, id):
         self.file = file
+        self.name = id
         self.features = []
         self.__parse_file()
-        self.sort()
-        self.number_of_features = len(self.features)
+        self.length = len(self.features)
 
-    def sort(self):
-        from operator import attrgetter
+    def __sort(self):
         self.features = sorted(
-            self.features, key=attrgetter('start'))
+            self.features, key=lambda x: x['coords']['start'])
 
-    def compare(self, other):
-        # store results
-        # result = []
-        for i_0, feati in enumerate(self.features):
-            for j_0, featj in enumerate(other.features):
-                i, j = i_0+1, j_0+1
-                print(f'genbank feature {i}: {feati.start}..{feati.end}')
-                print(f'prodigal feature {j}: {featj.start}..{featj.end}')
-                if feati.start == featj.start and feati.end == featj.end:
-                    print("Complete match!", f"{i}:{j}")
-                    break
-                else:
-                    # check for 5' or 3' matches, print accordingly
-                    print(f"{i}:{j}", "Matching 5-prime" if feati.start ==
-                          featj.start else "5-prime mismatch", "Matching 3-prime" if feati.end == featj.end else "3-prime mismatch", sep="\t")
-                    # if one matches, it's likely that the algorithms are just off,
-                    # not that there's another match, so break here and move to next sequence
-                    if feati.start == featj.start or feati.end == featj.end:
-                        break
-
-    def __startsite(self, index):
-        return self.__location(index)["start"]
-
-    def __location(self, index):
-        return self.features[index].parse_location()
-
-    def __split_entry(self, f, r):
-        # 92527..92721,1..2502
-        # split location1/location2 on comma
-        joins = r.group(2).split(',')
-        # append the correct flags for later
-        joins[0] = joins[0].replace('..', '..>')
-        joins[1] = '<' + joins[1]
-        # add the two features
-        self.features.append(
-            Feature(
-                feature=f[0],
-                # minus strand: 1 | plus strand: 0
-                strand=1 if f[1].startswith(
-                    'complement') else 0,
-                # operator may be join() or complement()
-                operator=r.group(1),
-                location=joins[0]
-            )
-        )
-        self.features.append(
-            Feature(
-                feature=f[0],
-                # minus strand: 1 | plus strand: 0
-                strand=1 if f[1].startswith(
-                    'complement') else 0,
-                # operator may be join() or complement()
-                operator=r.group(1),
-                location=joins[1]
-            )
-        )
+    def __extract_coords(self, operator, seq_string):
+        # seq_string = "92527..92721,1..2502"
+        start_end = seq_string.split("..")
+        start, end = start_end[0], start_end[2] if len(
+            start_end) > 2 else start_end[1]
+        # return complement-coordinated dict based on operator, add flags for future use
+        return {'start': int(end.replace(">", "")) if operator == 'complement' else int(start.replace("<", "")),
+                'stop': int(start.replace("<", "")) if operator == 'complement' else int(end.replace(">", "")),
+                'flag': 'trunc-start' if start.startswith('<') else 'trunc-end' if end.startswith('>') else None}
 
     def __parse_file(self):
         with open(self.file, "r") as gb_file:
-            # skip to the features table
-            for line in gb_file:
-                if line.startswith("FEATURES"):
-                    break
-            # we only care about the FEATURES table
-            while not line.startswith("ORIGIN") and not line.startswith("//"):
-                # we also only care for CDS entries
-                if line.split()[0] == 'CDS':
-                    # if we are at a 'joined' sequence
-                    f = line.split()
-                    r = re.search(r'(.*)\((.+)\)', f[1])
-                    if 'join' in f[1]:
-                        # it'll be easier to compare the joins by splitting them
-                        self.__split_entry(f, r)
-                    else:
-                        self.features.append(
-                            Feature(
-                                feature=f[0],
-                                # minus strand: 1 | plus strand: 0
-                                strand=1 if f[1].startswith(
-                                    'complement') else 0,
-                                # operator may be join() or complement()
-                                operator=r.group(1) if r else None,
-                                location=r.group(2) if r else f[1]
-                            )
-                        )
-                line = gb_file.readline().strip()
+            lines = gb_file.readlines()
+        for line in lines:
+            if line.strip().startswith("CDS "):
+                tmp = line.split()
+                op_loc, loc = re.search(r'(.*)\((.+)\)', tmp[1]), tmp[1]
+                # append feature dict to growing list
+                d = {
+                    'feature': tmp[0],
+                    'strand': 1 if tmp[1].startswith("comp") else 0,
+                    'operator': op_loc.group(1) if op_loc else None,
+                    # 'coords': self.__extract_coords(d, op_loc.group(2) if op_loc else loc)
+                }
+                d['coords'] = self.__extract_coords(
+                    d['operator'], op_loc.group(2) if op_loc else loc)
+                self.features.append(d)
+        self.__sort()
+        self.__join_records()
 
-    def correct_plasmid(self):
-        potential_start, potential_end = self.features[-1], self.features[0]
-
-    def feature_print(self):
-        for feature in self.features:
-            print(vars(feature))
-
-    def print_features(self):
-        print(*self.features, sep="\n")
+    def __join_records(self):
+        for idx, feature in enumerate(list(self.features)):
+            if feature['coords']['flag'] is None:
+                continue
+            curr, prev = feature, self.features[idx-1]
+            # fix wraparound features -- join previous and current feature
+            if curr['coords']['flag'] == "trunc-start" and prev['coords']['flag'] == 'trunc-end':
+                # update the previous entry
+                self.features[idx-1]['coords'] = {
+                    'start': prev['coords']['start'],
+                    'stop': curr['coords']['stop'],
+                    'flag': None
+                }
+                # remove the current entry since it's merged with the previous
+                self.features.pop(idx)
