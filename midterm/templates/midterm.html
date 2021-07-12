@@ -16,6 +16,10 @@
         <tr id="title">
             <th id="table-title" colspan="2">Summary</th>
         </tr>
+        <tr>
+            <td><i><b>Genbank Accession</b></i></td>
+            <td><a href="https://www.ncbi.nlm.nih.gov/nuccore/{{ acc }}" target="_blank">{{ acc }}</a></td>
+        </tr>
         {%- for field, value in summary %}
         <tr>
             <td><i><b>{{ field.replace("_", " ") }}</b></i></td>
@@ -28,6 +32,20 @@
         <tr>
             <td id="linkout"><a href="{{ ref.file }}" target="_blank">{{ ref.name }} source</a></td>
             <td id="linkout"><a href="{{ pred.file }}" target="_blank">{{ pred.name }} source</a></td>
+        </tr>
+        <tr>
+            <td id="linkout">
+                <form action="./compare_gene_prediction.cgi">
+                    <label for="acc">Choose a sequence:</label>
+                    <br />
+                    <select name="acc" id="acc">
+                        {%- for file in predownloaded %}
+                        <option value="{{ file }}">{{ file }}</option>
+                        {%- endfor %}
+                    </select>
+                    <input type="submit" value="Submit">
+                </form>
+            </td>
         </tr>
     </table>
 

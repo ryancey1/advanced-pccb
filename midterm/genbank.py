@@ -9,6 +9,7 @@ class GenbankRecord:
         self.file = file
         self.name = file_type
         self.features = []
+        self.organism = ""
         self.__parse_file()
         self.length = len(self.features)
 
@@ -18,18 +19,20 @@ class GenbankRecord:
 
     def __extract_coords(self, operator, seq_string):
         # seq_string = "92527..92721,1..2502"
-        start_end = seq_string.split("..")
+        start_end = seq_string.replace(")", "").split("..")
         start, end = start_end[0], start_end[2] if len(
             start_end) > 2 else start_end[1]
         # return complement-coordinated dict based on operator, add flags for future use
-        return {'start': int(end.replace(">", "")) if operator == 'complement' else int(start.replace("<", "")),
-                'stop': int(start.replace("<", "")) if operator == 'complement' else int(end.replace(">", "")),
+        return {'start': int(end.replace(">", "")) if operator is not None and 'complement' in operator else int(start.replace("<", "")),
+                'stop': int(start.replace("<", "")) if operator is not None and 'complement' in operator else int(end.replace(">", "")),
                 'flag': 'trunc-start' if start.startswith('<') else 'trunc-end' if end.startswith('>') else None}
 
     def __parse_file(self):
         with open(self.file, "r") as gb_file:
             lines = gb_file.readlines()
         for line in lines:
+            if line.strip().startswith("ORGANISM"):
+                self.organism = line.strip().split("  ")[1]
             if line.strip().startswith("CDS "):
                 tmp = line.split()
                 op_loc, loc = re.search(r'(.*)\((.+)\)', tmp[1]), tmp[1]
@@ -37,8 +40,7 @@ class GenbankRecord:
                 d = {
                     'feature': tmp[0],
                     'strand': 1 if tmp[1].startswith("comp") else 0,
-                    'operator': op_loc.group(1) if op_loc else None,
-                    # 'coords': self.__extract_coords(d, op_loc.group(2) if op_loc else loc)
+                    'operator': op_loc.group(1).split("(") if op_loc else None
                 }
                 d['coords'] = self.__extract_coords(
                     d['operator'], op_loc.group(2) if op_loc else loc)
