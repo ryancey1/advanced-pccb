@@ -40,8 +40,7 @@ class GenbankRecord:
                 d = {
                     'feature': tmp[0],
                     'strand': 1 if tmp[1].startswith("comp") else 0,
-                    'operator': op_loc.group(1).split("(") if op_loc else None,
-                    # 'coords': self.__extract_coords(d, op_loc.group(2) if op_loc else loc)
+                    'operator': op_loc.group(1).split("(") if op_loc else None
                 }
                 d['coords'] = self.__extract_coords(
                     d['operator'], op_loc.group(2) if op_loc else loc)
