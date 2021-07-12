@@ -37,6 +37,7 @@
             <td id="linkout">
                 <form action="./compare_gene_prediction.cgi">
                     <label for="acc">Choose a sequence:</label>
+                    <br />
                     <select name="acc" id="acc">
                         {%- for file in predownloaded %}
                         <option value="{{ file }}">{{ file }}</option>
