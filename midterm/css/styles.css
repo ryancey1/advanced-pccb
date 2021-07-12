@@ -10,7 +10,7 @@ table#summary {
     border-collapse: collapse;
     float: left;
     position: fixed;
-    width: 28%;
+    width: 33%;
 }
 
 table#summary td {
@@ -36,7 +36,7 @@ table#results {
     padding: 5px;
     border: 2px solid rgb(80, 80, 80);
     float: right;
-    width:70%;
+    width:65%;
     margin-bottom: 10px;
 }
 
