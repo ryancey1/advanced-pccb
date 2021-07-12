@@ -6,9 +6,11 @@ import jinja2
 import os
 import argparse
 import cgi
+import re
 
 
 def parseArgs():
+    # choose from pre-downloaded
     form = cgi.FieldStorage()
     acc = form.getfirst('acc')
 
@@ -119,7 +121,7 @@ def main():
     # cgi print statements, pass seqs list in the render call
     print('Content-Type: text/html\n\n')
     print(template.render(summary=zip(summary._fields, summary),
-                          results=results, ref=alg1, pred=alg2, acc=GENBANK_ACCESSION))
+                          results=results, ref=alg1, pred=alg2, acc=GENBANK_ACCESSION, predownloaded=sorted([f.replace(".fasta", "") for f in os.listdir('./files') if re.match(r'.*\.fasta', f)])))
 
 
 if __name__ == '__main__':

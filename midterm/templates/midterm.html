@@ -38,10 +38,9 @@
                 <form action="./compare_gene_prediction.cgi">
                     <label for="acc">Choose a sequence:</label>
                     <select name="acc" id="acc">
-                        <option value="AB011549.2">AB011549.2</option>
-                        <option value="NZ_CP029748.1">NZ_CP029748.1</option>
-                        <option value="KX711616.1">KX711616.1</option>
-                        <option value="NC_006323.1">NC_006323.1</option>
+                        {%- for file in predownloaded %}
+                        <option value="{{ file }}">{{ file }}</option>
+                        {%- endfor %}
                     </select>
                     <input type="submit" value="Submit">
                 </form>

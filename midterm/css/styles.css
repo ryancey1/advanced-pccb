@@ -22,12 +22,6 @@ table#summary td#linkout {
     border: 0;
     padding: 5px;
 }
-/* 
-table#summary th {
-    text-align: left;
-    border: 2px solid rgb(80, 80, 80);
-    padding: 5px;
-} */
 
 table#results {
     border-collapse: collapse;
@@ -58,12 +52,6 @@ th#table-title {
     border: 2px solid rgb(80, 80, 80);
     padding: 5px;
 }
-
-/* th#table-title {
-    font-size: 24px;
-    text-align: center;
-    padding: 5px;
-} */
 
 th#cds, td#cds-number {
     background-color: rgb(255, 255, 224);
