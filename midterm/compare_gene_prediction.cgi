@@ -4,25 +4,8 @@ from genbank import GenbankRecord
 from collections import namedtuple
 import jinja2
 import os
-import argparse
-import cgi
+from utils import check_environment
 import re
-
-
-def parseArgs():
-    # choose from pre-downloaded
-    form = cgi.FieldStorage()
-    acc = form.getfirst('acc')
-
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "-a", "--accession", default="AB011549.2", metavar="acc",
-        help="Genbank accession number of an alternate annotation to be run against (default: AB011549.2)")
-
-    if acc is not None:
-        return parser.parse_args(["-a", acc])
-
-    return parser.parse_args()
 
 
 def compare_annotation(algo1, algo2):
@@ -78,33 +61,9 @@ def compare_annotation(algo1, algo2):
                    mismatch_5, mismatch_3, len(algo1.features), len(algo2.features)), results
 
 
-def check_environment():
-    """Ensures proper directory structure and downloads necessary input files from NCBI (redirects STDOUT and STERR -- to allow CGI script)"""
-    global GENBANK_ANNOTATION, PRODIGAL_ANNOTATION, GENBANK_ACCESSION
-
-    args = parseArgs()
-
-    GENBANK_ACCESSION = args.accession
-    GENBANK_ANNOTATION = f"gb_{GENBANK_ACCESSION}_annotation.gb"
-    PRODIGAL_ANNOTATION = f"pr_{GENBANK_ACCESSION}_annotation.gb"
-
-    if not os.path.isdir('files'):
-        os.mkdir('files')
-    # make annotation/seq files if they don't exist
-    if not os.path.isfile(f'files/{GENBANK_ANNOTATION}'):
-        os.system(
-            f'wget -O files/{GENBANK_ANNOTATION} "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id={GENBANK_ACCESSION}&retmode=text&rettype=gb" >/dev/null 2>&1')
-    if not os.path.isfile(f'files/{GENBANK_ACCESSION}.fasta'):
-        os.system(
-            f'wget -O files/{GENBANK_ACCESSION}.fasta "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id={GENBANK_ACCESSION}&retmode=text&rettype=fasta" >/dev/null 2>&1')
-    if not os.path.isfile(f'files/{PRODIGAL_ANNOTATION}'):
-        os.system(
-            f'./prodigal -i files/{GENBANK_ACCESSION}.fasta -o files/{PRODIGAL_ANNOTATION} -p meta >/dev/null 2>&1')
-
-
 def main():
     # make sure the files are there and in proper directory
-    check_environment()
+    GENBANK_ANNOTATION, PRODIGAL_ANNOTATION, GENBANK_ACCESSION = check_environment()
 
     # read files into GenbankRecord objects
     alg1 = GenbankRecord(f'./files/{GENBANK_ANNOTATION}', 'Genbank')
