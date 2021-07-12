@@ -9,6 +9,7 @@ class GenbankRecord:
         self.file = file
         self.name = file_type
         self.features = []
+        self.organism = ""
         self.__parse_file()
         self.length = len(self.features)
 
@@ -30,6 +31,8 @@ class GenbankRecord:
         with open(self.file, "r") as gb_file:
             lines = gb_file.readlines()
         for line in lines:
+            if line.strip().startswith("ORGANISM"):
+                self.organism = line.strip().split("  ")[1]
             if line.strip().startswith("CDS "):
                 tmp = line.split()
                 op_loc, loc = re.search(r'(.*)\((.+)\)', tmp[1]), tmp[1]

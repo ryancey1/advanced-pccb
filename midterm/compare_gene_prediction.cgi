@@ -26,7 +26,7 @@ def parseArgs():
 def compare_annotation(algo1, algo2):
     # named tuples to store information
     Summary = namedtuple(
-        "Summary", "Reference_annotation_source Prediction_annotation_source Reference_CDS_Count Prediction_CDS_Count Exact_Matches Start_Disagrees Stop_Disagrees Unique_To_Reference Unique_To_Predicition")
+        "Summary", "Organism Reference_annotation_source Prediction_annotation_source Reference_CDS_Count Prediction_CDS_Count Exact_Matches Start_Disagrees Stop_Disagrees Unique_To_Reference Unique_To_Predicition")
     Results = namedtuple(
         "Results", "ref_start pred_start start_agrees ref_stop pred_stop stop_agrees")
     # set up counters and a storage list
@@ -71,9 +71,8 @@ def compare_annotation(algo1, algo2):
             nomatch += 1
             results.append(
                 Results(ref_start, "-", "DISAGREES", ref_stop, "-", "DISAGREES"))
-
         match = False  # reset boolean flag
-    return Summary(algo1.name, algo2.name, algo1.length, algo2.length, perfect,
+    return Summary(algo1.organism, algo1.name, algo2.name, algo1.length, algo2.length, perfect,
                    mismatch_5, mismatch_3, len(algo1.features), len(algo2.features)), results
 
 
