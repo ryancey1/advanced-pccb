@@ -51,15 +51,28 @@ function processJSON(data) {
 }
 
 
-
 // run our javascript once the page is ready
 $(document).ready(function () {
-    $('#search_term').autocomplete({
-        source: 'fetch_all.py'
-    });
     // define what should happen when a user clicks submit on our search form
     $('#submit').click(function () {
         runSearch();
         return false;  // prevents 'normal' form submission
+    });
+});
+
+
+$(document).ready(function () {
+    var src = $.ajax({
+        url: "./fetch_all.py",
+        dataType: 'json'
+    });
+
+    $("#search_term").autocomplete({
+        maxResults: 5,
+        source: function (request, response) {
+            var results = $.ui.autocomplete.filter(src, request.term);
+
+            response(results.slice(0, this.options.maxResults));
+        }
     });
 });
