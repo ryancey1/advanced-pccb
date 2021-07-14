@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8" />
-	<title>AJAX demo</title>
-	<!--[if IE]>
+    <meta charset="utf-8" />
+    <title>AJAX demo</title>
+    <!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
     <link rel="stylesheet" type="text/css" href="css/search_product.css" />
@@ -13,9 +14,10 @@
 
 <body id="main">
 
-	<h1>E. coli gene search</h1>
+    <h1>E. coli gene search</h1>
     <form name="gene_search" id="gene_search" action="">
-        <input name="search_term" type="search" value="" autofocus="autofocus" placeholder="Enter a search term"/>
+        <input name="search_term" type="search" id="search_term" value="" autofocus="autofocus"
+            placeholder="Enter a search term" />
         <input name="submit" type="submit" id="submit" value="submit">
     </form>
     <section id='results'>
@@ -24,10 +26,10 @@
         </p>
         <table>
             <thead>
-            <tr>
-                <td>Locus tag</td>
-                <td>Product</td>
-            </tr>
+                <tr>
+                    <td>Locus tag</td>
+                    <td>Product</td>
+                </tr>
             </thead>
             <tbody>
                 <!-- this will be filled in by javascript when there are results -->
