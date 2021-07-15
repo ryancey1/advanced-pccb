@@ -64,6 +64,6 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#search_term").autocomplete({
         maxResults: 5,
-        source: "fetch_all.cgi"
+        url: "fetch_all.cgi"
     });
 });
