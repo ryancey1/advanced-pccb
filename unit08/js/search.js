@@ -62,7 +62,7 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-    var src = $.get({
+    var src = $.ajax({
         url: "./fetch_all.py"
     });
 
