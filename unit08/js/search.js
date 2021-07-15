@@ -64,7 +64,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#search_term").autocomplete({
         source: function (request, response) {
-            var results = $.ui.autocomplete.filter('./fetch_all.cgi', request.term);
+            var results = request("./fetch_all.cgi");
             response(results.slice(0, 5));
         }
     });
