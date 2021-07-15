@@ -21,6 +21,19 @@ function runSearch(term) {
     });
 }
 
+function autoComplete(term) {
+
+    var t = $('#term').serialize();
+
+    $.ajax({
+        url: './fetch_all.cgi',
+        dataType: 'json',
+        data: t,
+        success: $('#term').autocomplete({
+            source: data
+        })
+    });
+}
 
 // this processes a passed JSON structure representing gene matches and draws it
 //  to the result table
@@ -62,14 +75,7 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-    // var term = $('#search_term')
-    // var url = './fetch_all.cgi?search_term=' + term
-    // $("#search_term").autocomplete({
-    //     url: url
-    // });
     $('#term').change(function () {
-        $("#term").autocomplete({
-            source: './fetch_all.cgi'
-        });
+        autoComplete();
     });
 });

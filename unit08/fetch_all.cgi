@@ -13,9 +13,9 @@ conn = mysql.connector.connect(
     user='ryancey3', password='Rancey19931!', host='localhost', database='biotest'
 )
 curs = conn.cursor()
-qry = "SELECT product FROM genes"
+qry = "SELECT product FROM genes WHERE product LIKE %s LIMIT 5"
 
-curs.execute(qry)
+curs.execute(qry, ('%'+term+'%', ))
 
 print(json.dumps([item for product in curs for item in product]))
 
