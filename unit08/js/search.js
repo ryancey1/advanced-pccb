@@ -63,7 +63,8 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $("#search_term").autocomplete({
-        maxResults: 5,
-        source: "./fetch_all.cgi"
-    });
+        function(request, response) {
+            var results = $.ui.autocomplete.filter('./fetch_all.cgi', request.term);
+            response(results.slice(0, 5));
+        });
 });
