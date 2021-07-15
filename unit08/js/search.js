@@ -62,8 +62,8 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
+    var term = $('#search_term').serialize();
     $("#search_term").autocomplete({
-        maxResults: 5,
-        url: "fetch_all.cgi"
+        url: './fetch_all.cgi/?search_term=' + term
     });
 });

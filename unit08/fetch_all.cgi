@@ -6,12 +6,14 @@ import cgi
 
 print("Content-Type: application/json\n\n")
 form = cgi.FieldStorage()
+
 term = form.getvalue('search_term')
+
 conn = mysql.connector.connect(
     user='ryancey3', password='Rancey19931!', host='localhost', database='biotest'
 )
 curs = conn.cursor()
-qry = "SELECT product FROM genes WHERE product LIKE %s"
+qry = "SELECT product FROM genes WHERE product LIKE %s LIMIT 5"
 
 curs.execute(qry, ("%"+term+"%", ))
 
