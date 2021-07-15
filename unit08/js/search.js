@@ -62,17 +62,17 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-    var src = $.ajax({
-        url: "./fetch_all.py",
-        dataType: 'json'
+    var src = $.get({
+        url: "./fetch_all.py"
     });
 
     $("#search_term").autocomplete({
         maxResults: 5,
-        source: function (request, response) {
-            var results = $.ui.autocomplete.filter(src, request.term);
+        source: src
+        // function (request, response) {
+        //     var results = $.ui.autocomplete.filter(src, request.term);
 
-            response(results.slice(0, this.options.maxResults));
-        }
+        //     response(results.slice(0, this.options.maxResults));
+        // }
     });
 });
