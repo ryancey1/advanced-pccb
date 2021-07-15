@@ -67,10 +67,9 @@ $(document).ready(function () {
     // $("#search_term").autocomplete({
     //     url: url
     // });
-    $('#search_term').change(function () {
-        // var qry = 'fetch_all.cgi?search_term=' + this.element;
-        $("#search_term").autocomplete({
-            url: './fetch_all.cgi'
+    $('#term').change(function () {
+        $("#term").autocomplete({
+            source: './fetch_all.cgi'
         });
     });
 });

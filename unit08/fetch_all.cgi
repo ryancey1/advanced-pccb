@@ -7,15 +7,15 @@ import cgi
 print("Content-Type: application/json\n\n")
 form = cgi.FieldStorage()
 
-term = form.getvalue('search_term')
+term = form.getvalue('term')
 
 conn = mysql.connector.connect(
     user='ryancey3', password='Rancey19931!', host='localhost', database='biotest'
 )
 curs = conn.cursor()
-qry = "SELECT product FROM genes WHERE product LIKE %s LIMIT 5"
+qry = "SELECT product FROM genes"
 
-curs.execute(qry, ("%"+term+"%", ))
+curs.execute(qry)
 
 print(json.dumps([item for product in curs for item in product]))
 
