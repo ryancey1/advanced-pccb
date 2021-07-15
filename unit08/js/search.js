@@ -62,9 +62,9 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-    var src = $.ajax({
+    var src = JSON.parse($.ajax({
         url: "./fetch_all.py"
-    });
+    }));
 
     document.write(src);
     // $("#search_term").autocomplete({
