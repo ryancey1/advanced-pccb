@@ -68,9 +68,9 @@ $(document).ready(function () {
     //     url: url
     // });
     $('#search_term').change(function () {
-        var qry = 'fetch_all.cgi?search_term=' + this.element;
+        // var qry = 'fetch_all.cgi?search_term=' + this.element;
         $("#search_term").autocomplete({
-            url: qry
+            url: './fetch_all.cgi'
         });
     });
 });
