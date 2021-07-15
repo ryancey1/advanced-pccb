@@ -62,9 +62,15 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-    var term = $('#search_term')
-    var url = './fetch_all.cgi?search_term=' + term
-    $("#search_term").autocomplete({
-        url: url
+    // var term = $('#search_term')
+    // var url = './fetch_all.cgi?search_term=' + term
+    // $("#search_term").autocomplete({
+    //     url: url
+    // });
+    $('#search_term').change(function () {
+        var qry = 'fetch_all.cgi?search_term=' + this.element;
+        $("#search_term").autocomplete({
+            url: qry
+        });
     });
 });
