@@ -66,13 +66,14 @@ $(document).ready(function () {
         url: "./fetch_all.py"
     });
 
-    $("#search_term").autocomplete({
-        maxResults: 5,
-        source: src
-        // function (request, response) {
-        //     var results = $.ui.autocomplete.filter(src, request.term);
+    document.write(src);
+    // $("#search_term").autocomplete({
+    //     maxResults: 5,
+    //     source: src
+    //     // function (request, response) {
+    //     //     var results = $.ui.autocomplete.filter(src, request.term);
 
-        //     response(results.slice(0, this.options.maxResults));
-        // }
-    });
+    //     //     response(results.slice(0, this.options.maxResults));
+    //     // }
+    // });
 });
