@@ -63,7 +63,8 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     var term = $('#search_term').serialize();
+    var url = ['./fetch_all.cgi/?search_term=', term].join('');
     $("#search_term").autocomplete({
-        url: './fetch_all.cgi/?search_term=' + term
+        url: url
     });
 });
