@@ -13,7 +13,7 @@ conn = mysql.connector.connect(
 curs = conn.cursor()
 qry = "SELECT product FROM genes WHERE product LIKE %s"
 
-curs.execute(qry, ("%"+term+"%"))
+curs.execute(qry, ("%"+term+"%", ))
 
 print(json.dumps([item for product in curs for item in product]))
 
