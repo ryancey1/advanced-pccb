@@ -62,18 +62,8 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-    var src = JSON.parse($.ajax({
-        url: "./fetch_all.py"
-    }));
-
-    document.write(src);
-    // $("#search_term").autocomplete({
-    //     maxResults: 5,
-    //     source: src
-    //     // function (request, response) {
-    //     //     var results = $.ui.autocomplete.filter(src, request.term);
-
-    //     //     response(results.slice(0, this.options.maxResults));
-    //     // }
-    // });
+    $("#search_term").autocomplete({
+        maxResults: 5,
+        source: "./fetch_all.cgi"
+    });
 });
