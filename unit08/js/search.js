@@ -63,9 +63,6 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $("#search_term").autocomplete({
-        source: function (request, response) {
-            var results = request("./fetch_all.cgi");
-            response(results.slice(0, 5));
-        }
+        source: './fetch_all.cgi'
     });
 });
