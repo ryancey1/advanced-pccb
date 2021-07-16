@@ -1,5 +1,5 @@
 // this function executes our search via an AJAX call
-function runSearch(term) {
+function runSearch() {
     // hide and clear the previous results, if any
     clearResults();
 
@@ -11,10 +11,10 @@ function runSearch(term) {
         url: './search_product.cgi',
         dataType: 'json',
         data: frmStr,
-        success: function (data, textStatus, jqXHR) {
+        success: function (data, _textStatus, _jqXHR) {
             processJSON(data);
         },
-        error: function (jqXHR, textStatus, errorThrown) {
+        error: function (_jqXHR, textStatus, errorThrown) {
             alert("Failed to perform gene search! textStatus: (" + textStatus +
                 ") and errorThrown: (" + errorThrown + ")");
         }
@@ -22,8 +22,8 @@ function runSearch(term) {
 }
 
 
-// this processes a passed JSON structure representing gene matches and draws it
-//  to the result table
+// this processes a passed JSON structure representing gene matches and draws it 
+// to the result table
 function processJSON(data) {
     // set the span that lists the match count
     $('#match_count').text(data.match_count);
@@ -63,10 +63,10 @@ $(document).ready(function () {
     $("#gene_search").keyup(function () {
         // catch the terms
         var term = $('#gene_search').serialize()
+
         // submit a POST request to the CGI script with the term
         $.ajax({
             url: "./fetch_all.cgi",
-            type: "POST",
             data: term,
             dataType: "json",
             success: function (data) {
