@@ -80,7 +80,9 @@ $(document).ready(function () {
 
     // when reset button is clicked
     $('#reset').click(function () {
-        parent.location.href = "./search.html"
+        $('#gene_search').reset();
+        clearResults();
+        return false; // prevents 'normal' form submission
     })
 
     // define what should happen when a user clicks submit on our search form
