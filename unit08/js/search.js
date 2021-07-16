@@ -81,15 +81,21 @@ $(document).ready(function () {
 
     // when reset button is clicked
     $('#reset').click(function () {
-        $('#gene_search').reset();
+        // clear out search text
+        $('#term').val('');
+        // focus on text box
+        $('#term').focus();
+        // hide result table
         clearResults();
         return false; // prevents 'normal' form submission
     });
 
     // define what should happen when a user clicks submit on our search form
     $('#submit').click(function () {
+        // search for submitted text
         runSearch();
-        $('#term').blur(); // remove focus from text box after search
+        // remove focus from search bar
+        $('#term').blur();
         return false;  // prevents 'normal' form submission
     });
 });
