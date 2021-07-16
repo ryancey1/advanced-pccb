@@ -1,8 +1,7 @@
 // this function executes our search via an AJAX call
 function runSearch(term) {
     // hide and clear the previous results, if any
-    $('#results').hide();
-    $('tbody').empty();
+    clearResults();
 
     // transforms all the form parameters into a string we can send to the server
     var frmStr = $('#gene_search').serialize();
@@ -50,13 +49,16 @@ function processJSON(data) {
     $('#results').show();
 }
 
+function clearResults() {
+    $('#results').hide();
+    $('tbody').empty();
+}
 
 // run our javascript once the page is ready
 $(document).ready(function () {
     $('#reset').click(function () {
-        $('#results').hide();
-        $('tbody').empty();
         $('#gene_search').reset();
+        clearResults();
     })
 
     // define what should happen when a user clicks submit on our search form
