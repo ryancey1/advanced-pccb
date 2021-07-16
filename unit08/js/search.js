@@ -74,6 +74,7 @@ $(document).ready(function () {
                 // use the return values to autocomplete
                 $("#term").autocomplete({
                     source: data,
+                    minLength: 0
                 });
             }
         });
