@@ -53,6 +53,12 @@ function processJSON(data) {
 
 // run our javascript once the page is ready
 $(document).ready(function () {
+    $('#reset').click(function () {
+        $('#results').hide();
+        $('tbody').empty();
+        $('#gene_search').reset();
+    })
+
     // define what should happen when a user clicks submit on our search form
     $('#submit').click(function () {
         runSearch();
