@@ -56,6 +56,7 @@ $(document).ready(function () {
     // define what should happen when a user clicks submit on our search form
     $('#submit').click(function () {
         runSearch();
+        $('#term').blur();
         return false;  // prevents 'normal' form submission
     });
 });
