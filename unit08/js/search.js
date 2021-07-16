@@ -62,13 +62,14 @@ $(document).ready(function () {
     // when a key is entered in the search box
     $("#gene_search").keyup(function () {
         // catch the terms
-        var term = $('#gene_search').serialize()
+        var term = $('#gene_search').serialize();
 
         // submit a POST request to the CGI script with the term
         $.ajax({
             url: "./fetch_all.cgi",
             data: term,
             dataType: "json",
+            type: "POST",
             success: function (data) {
                 // use the return values to autocomplete
                 $("#term").autocomplete({
@@ -83,7 +84,7 @@ $(document).ready(function () {
         $('#gene_search').reset();
         clearResults();
         return false; // prevents 'normal' form submission
-    })
+    });
 
     // define what should happen when a user clicks submit on our search form
     $('#submit').click(function () {
