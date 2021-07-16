@@ -6,6 +6,7 @@ function runSearch(term) {
     // transforms all the form parameters into a string we can send to the server
     var frmStr = $('#gene_search').serialize();
 
+    // run a search with the input data
     $.ajax({
         url: './search_product.cgi',
         dataType: 'json',
@@ -49,6 +50,7 @@ function processJSON(data) {
     $('#results').show();
 }
 
+// hide results and clear table
 function clearResults() {
     $('#results').hide();
     $('tbody').empty();
@@ -56,15 +58,37 @@ function clearResults() {
 
 // run our javascript once the page is ready
 $(document).ready(function () {
+    // autoccomplete function
+    // when a key is entered in the search box
+    $("#gene_search").keyup(function () {
+        // catch the terms
+        var term = $('#gene_search').serialize()
+        // submit a POST request to the CGI script with the term
+        $.ajax({
+            url: "./fetch_all.cgi",
+            type: "POST",
+            data: term,
+            dataType: "json",
+            success: function (data) {
+                // use the return values to autocomplete
+                $("#term").autocomplete({
+                    source: data,
+                });
+            }
+        });
+    });
+
+    // when reset button is clicked
     $('#reset').click(function () {
         $('#gene_search').reset();
         clearResults();
+        return false; // prevents 'normal' form submission
     })
 
     // define what should happen when a user clicks submit on our search form
     $('#submit').click(function () {
         runSearch();
-        $('#term').blur();
+        $('#term').blur(); // remove focus from text box after search
         return false;  // prevents 'normal' form submission
     });
 });

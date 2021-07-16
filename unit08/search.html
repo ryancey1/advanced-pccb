@@ -13,23 +13,6 @@
     <script type="text/javascript"
         src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="./js/search.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#gene_search").keyup(function () {
-                $.ajax({
-                    url: "./fetch_all.cgi",
-                    type: "POST",
-                    data: "search_term=" + $("#term").val(),
-                    dataType: "json",
-                    success: function (data) {
-                        $("#term").autocomplete({
-                            source: data,
-                        });
-                    }
-                });
-            });
-        });
-    </script>
 </head>
 
 <body id="main">
