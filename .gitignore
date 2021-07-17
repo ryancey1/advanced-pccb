@@ -2,3 +2,6 @@ unit04/sequence.py
 midterm/old_functions.py
 midterm/*.html
 midterm/prodigal
+unit08/biotest_genes.sql
+unit08/biotest.table
+unit08/create_db.py
