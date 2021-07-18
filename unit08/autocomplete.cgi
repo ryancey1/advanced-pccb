@@ -6,7 +6,7 @@ import cgi
 
 print("Content-Type: application/json\n\n")
 form = cgi.FieldStorage()
-term = form.getvalue('search_term')
+term = form.getvalue('term')
 conn = mysql.connector.connect(
     user='ryancey3', password='Rancey19931!', host='localhost', database='biotest'
 )

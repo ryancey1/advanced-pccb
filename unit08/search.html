@@ -18,8 +18,7 @@
 <body id="main">
     <h1><i>E. coli</i> gene search</h1>
     <form name="gene_search" id="gene_search" action="">
-        <input name="search_term" type="search" id="term" value="" autofocus="autofocus"
-            placeholder="Enter a search term" />
+        <input name="term" type="search" id="term" value="" autofocus="autofocus" placeholder="Enter a search term" />
         <input name="submit" type="submit" id="submit" value="submit">
         <input id="reset" type="submit" value="reset">
     </form>
@@ -38,7 +37,9 @@
                 <!-- this will be filled in by javascript when there are results -->
             </tbody>
     </section>
-
+    <section id='autoc'>
+        <p id='possibe'></p>
+    </section>
 </body>
 
 </html>

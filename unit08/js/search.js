@@ -62,22 +62,28 @@ $(document).ready(function () {
     // when a key is entered in the search box
     $("#gene_search").keyup(function () {
         // catch the terms
-        var term = $('#gene_search').serialize();
+        // var term = $('#term').val();
+        // alert(term);
+
+        $("#term").autocomplete({
+            source: "./autocomplete.cgi",
+            minLength: 0
+        });
 
         // submit a POST request to the CGI script with the term
-        $.ajax({
-            url: "./fetch_all.cgi",
-            data: term,
-            dataType: "json",
-            type: "POST",
-            success: function (data) {
-                // use the return values to autocomplete
-                $("#term").autocomplete({
-                    source: data,
-                    minLength: 0
-                });
-            }
-        });
+        // $.ajax({
+        //     url: "./autocomplete.cgi",
+        //     data: term,
+        //     dataType: "json",
+        //     type: "POST",
+        //     success: function (data) {
+        //         // use the return values to autocomplete
+        //         $("#term").autocomplete({
+        //             source: data,
+        //             minLength: 0
+        //         });
+        //     }
+        // });
     });
 
     // when reset button is clicked
