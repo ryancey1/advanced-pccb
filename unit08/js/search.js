@@ -60,15 +60,10 @@ function clearResults() {
 $(document).ready(function () {
 
     // autoccomplete function
-    // when a key is entered in the search box
-    $("#gene_search").keyup(function () {
-
-        // run the autocomplete function
-        $("#term").autocomplete({
-            source: "./autocomplete.cgi",
-            minLength: 0
-        });
-
+    // run the autocomplete function
+    $("#term").autocomplete({
+        source: "./autocomplete.cgi",
+        minLength: 0
     });
 
     // when reset button is clicked
