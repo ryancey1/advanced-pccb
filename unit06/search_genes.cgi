@@ -21,11 +21,8 @@ def main():
         q = '%'+queried+'%'
         qq = queried
 
-    # mask my SQL password
-    pw = os.getenv('JHU_SQL_PW')
-
     # connect to my chado database
-    conn = sql.connect(user='ryancey3', password=pw,
+    conn = sql.connect(user='ryancey3', password="Rancey19931!",
                        host='localhost', database='ryancey3_chado')
     curs = conn.cursor()
 
