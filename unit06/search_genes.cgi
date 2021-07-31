@@ -21,13 +21,8 @@ def main():
         q = '%'+queried+'%'
         qq = queried
 
-    # mask my SQL password
-    with open("/export/home/ryancey3/.bashrc") as z:
-        tmp = z.read()
-        pw = re.search(r'\n.*JHU_SQL_PW="(.*)"\n', tmp).group(1)
-
     # connect to my chado database
-    conn = sql.connect(user='ryancey3', password=pw,
+    conn = sql.connect(user='ryancey3', password='Rancey19931!',
                        host='localhost', database='ryancey3_chado')
     curs = conn.cursor()
 
